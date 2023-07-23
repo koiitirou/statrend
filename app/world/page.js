@@ -1,6 +1,8 @@
-import { Box } from '@mui/material';
+import Image from 'next/image';
+import { Box, Container } from '@mui/material';
 import ResBar from 'components/layout/resbar';
-import Content1 from './content1';
+import HideBar from 'components/layout/hidebar';
+import CssBaseline from '@mui/material/CssBaseline';
 
 export const metadata = {
   description: 'Explore time-series data, maps, graphs & rankings on all countries in the world.',
@@ -8,8 +10,7 @@ export const metadata = {
 export default function Home() {
   return (
     <Box>
-      <ResBar />
-      <Content1 />
+      <ResBar /> Hello
     </Box>
   );
 }
