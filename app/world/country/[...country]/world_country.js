@@ -12,6 +12,9 @@ const rep1 = {
 };
 
 const World_country = ({ res2, wor_cnt, country, wor_category1, array6 }) => {
+  console.log(wor_cnt);
+  console.log(res2);
+  console.log(country);
   return (
     <Box
       sx={{

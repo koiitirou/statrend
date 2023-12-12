@@ -44,11 +44,15 @@ export async function generateMetadata({ params }) {
   // read route params
   const { country } = params;
   //   const arr5 = array4.find((f) => f.category == category);
+  const cn1 = wor_cnt.find((s) => s.is2 == country[0]);
+  console.log(cn1);
 
   return {
-    title: ``,
+    title: `${cn1.enm} data rankings - ${country[1] == undefined ? 'summary' : country[1]}`,
     // description: `List of countries in the world ranked by ${arr5.em1} with time-series graphs, charts, and interactive maps for ${arr5.tmn}-${arr5.tmx}.`,
-    description: ``,
+    description: `This page summarizes ${cn1.enm} statistical data rankings (${
+      country[1] == undefined ? 'summary' : country[1]
+    }).`,
   };
 }
 
