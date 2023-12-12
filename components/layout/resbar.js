@@ -13,8 +13,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import Link from '@mui/material/Link';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['World'];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -28,10 +29,10 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position='static' sx={{ backgroundColor: '#2196f3' }}>
+    <AppBar position='static'>
       <Container maxWidth='xl'>
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, fill: '#007FFF' }} />
           <Typography
             variant='h6'
             noWrap
@@ -43,7 +44,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'rgba(0, 0, 0, 0.87)',
               textDecoration: 'none',
             }}
           >
@@ -57,7 +58,7 @@ function ResponsiveAppBar() {
               aria-controls='menu-appbar'
               aria-haspopup='true'
               onClick={handleOpenNavMenu}
-              color='inherit'
+              color='rgba(0, 0, 0, 0.87)'
             >
               <MenuIcon />
             </IconButton>
@@ -79,14 +80,16 @@ function ResponsiveAppBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign='center'>{page}</Typography>
-                </MenuItem>
-              ))}
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign='center'>
+                  <Link href='/world' sx={{ color: 'black' }}>
+                    World Ranking
+                  </Link>
+                </Typography>
+              </MenuItem>
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, fill: '#007FFF' }} />
           <Typography
             variant='h5'
             noWrap
@@ -99,22 +102,21 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'rgba(0, 0, 0, 0.87)',
               textDecoration: 'none',
             }}
           >
             StaTrend
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'rgba(0, 0, 0, 0.87)', display: 'block' }}
+            >
+              <Link href='/world' sx={{ color: 'black' }}>
+                World Ranking
+              </Link>
+            </Button>
           </Box>
         </Toolbar>
       </Container>

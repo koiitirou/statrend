@@ -1,0 +1,67 @@
+[
+  {
+    "lnk": "health",
+    "ids": "8",
+    "nam": "人口・健康"
+  },
+  {
+    "lnk": "economy",
+    "ids": "3",
+    "nam": "経済"
+  },
+  {
+    "lnk": "financial",
+    "ids": "7",
+    "nam": "金融"
+  },
+  {
+    "lnk": "infrastructure",
+    "ids": "9",
+    "nam": "インフラ"
+  },
+  {
+    "lnk": "agriculture",
+    "ids": "1",
+    "nam": "農業"
+  },
+  {
+    "lnk": "energy",
+    "ids": "5",
+    "nam": "エネルギー"
+  },
+  {
+    "lnk": "climate",
+    "ids": "19",
+    "nam": "気候"
+  },
+  {
+    "lnk": "science",
+    "ids": "14",
+    "nam": "科学技術"
+  },
+  {
+    "lnk": "private",
+    "ids": "12",
+    "nam": "ビジネス"
+  },
+  {
+    "lnk": "public",
+    "ids": "13",
+    "nam": "公費"
+  },
+  {
+    "lnk": "education",
+    "ids": "4",
+    "nam": "教育"
+  },
+  {
+    "lnk": "poverty",
+    "ids": "11",
+    "nam": "貧困"
+  },
+  {
+    "lnk": "gender",
+    "ids": "17",
+    "nam": "ジェンダー"
+  }
+]

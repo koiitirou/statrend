@@ -1,0 +1,1722 @@
+[
+  {
+    "is2": "AF",
+    "jpn": "アフガニスタン",
+    "log": "af",
+    "aka": "ア",
+    "enm": "Afghanistan",
+    "alp": "A"
+  },
+  {
+    "is2": "AL",
+    "jpn": "アルバニア",
+    "log": "al",
+    "aka": "ア",
+    "enm": "Albania",
+    "alp": "A"
+  },
+  {
+    "is2": "DZ",
+    "jpn": "アルジェリア",
+    "log": "dz",
+    "aka": "ア",
+    "enm": "Algeria",
+    "alp": "A"
+  },
+  {
+    "is2": "AS",
+    "jpn": "アメリカ領サモア",
+    "log": "as",
+    "aka": "ア",
+    "enm": "American Samoa",
+    "alp": "A"
+  },
+  {
+    "is2": "AD",
+    "jpn": "アンドラ",
+    "log": "ad",
+    "aka": "ア",
+    "enm": "Andorra",
+    "alp": "A"
+  },
+  {
+    "is2": "AO",
+    "jpn": "アンゴラ",
+    "log": "ao",
+    "aka": "ア",
+    "enm": "Angola",
+    "alp": "A"
+  },
+  {
+    "is2": "AG",
+    "jpn": "アンティグア・バーブーダ",
+    "log": "ag",
+    "aka": "ア",
+    "enm": "Antigua and Barbuda",
+    "alp": "A"
+  },
+  {
+    "is2": "AZ",
+    "jpn": "アゼルバイジャン",
+    "log": "az",
+    "aka": "ア",
+    "enm": "Azerbaijan",
+    "alp": "A"
+  },
+  {
+    "is2": "AR",
+    "jpn": "アルゼンチン",
+    "log": "ar",
+    "aka": "ア",
+    "enm": "Argentina",
+    "alp": "A"
+  },
+  {
+    "is2": "AU",
+    "jpn": "オーストラリア",
+    "log": "au",
+    "aka": "ア",
+    "enm": "Australia",
+    "alp": "A"
+  },
+  {
+    "is2": "AT",
+    "jpn": "オーストリア",
+    "log": "at",
+    "aka": "ア",
+    "enm": "Austria",
+    "alp": "A"
+  },
+  {
+    "is2": "BS",
+    "jpn": "バハマ",
+    "log": "bs",
+    "aka": "ハ",
+    "enm": "Bahamas",
+    "alp": "B"
+  },
+  {
+    "is2": "BH",
+    "jpn": "バーレーン",
+    "log": "bh",
+    "aka": "ハ",
+    "enm": "Bahrain",
+    "alp": "B"
+  },
+  {
+    "is2": "BD",
+    "jpn": "バングラデシュ",
+    "log": "bd",
+    "aka": "ハ",
+    "enm": "Bangladesh",
+    "alp": "B"
+  },
+  {
+    "is2": "AM",
+    "jpn": "アルメニア",
+    "log": "am",
+    "aka": "ア",
+    "enm": "Armenia",
+    "alp": "A"
+  },
+  {
+    "is2": "BB",
+    "jpn": "バルバドス",
+    "log": "bb",
+    "aka": "ハ",
+    "enm": "Barbados",
+    "alp": "B"
+  },
+  {
+    "is2": "BE",
+    "jpn": "ベルギー",
+    "log": "be",
+    "aka": "ハ",
+    "enm": "Belgium",
+    "alp": "B"
+  },
+  {
+    "is2": "BM",
+    "jpn": "バミューダ諸島",
+    "log": "bm",
+    "aka": "ハ",
+    "enm": "Bermuda",
+    "alp": "B"
+  },
+  {
+    "is2": "BT",
+    "jpn": "ブータン",
+    "log": "bt",
+    "aka": "ハ",
+    "enm": "Bhutan",
+    "alp": "B"
+  },
+  {
+    "is2": "BO",
+    "jpn": "ボリビア多民族国",
+    "log": "bo",
+    "aka": "ハ",
+    "enm": "Bolivia",
+    "alp": "B"
+  },
+  {
+    "is2": "BA",
+    "jpn": "ボスニア・ヘルツェゴビナ",
+    "log": "ba",
+    "aka": "ハ",
+    "enm": "Bosnia and Herzegovina",
+    "alp": "B"
+  },
+  {
+    "is2": "BW",
+    "jpn": "ボツワナ",
+    "log": "bw",
+    "aka": "ハ",
+    "enm": "Botswana",
+    "alp": "B"
+  },
+  {
+    "is2": "BR",
+    "jpn": "ブラジル",
+    "log": "br",
+    "aka": "ハ",
+    "enm": "Brazil",
+    "alp": "B"
+  },
+  {
+    "is2": "BZ",
+    "jpn": "ベリーズ",
+    "log": "bz",
+    "aka": "ハ",
+    "enm": "Belize",
+    "alp": "B"
+  },
+  {
+    "is2": "SB",
+    "jpn": "ソロモン諸島",
+    "log": "sb",
+    "aka": "サ",
+    "enm": "Solomon Islands",
+    "alp": "S"
+  },
+  {
+    "is2": "VG",
+    "jpn": "イギリス領ヴァージン諸島",
+    "log": "vg",
+    "aka": "ア",
+    "enm": "British Virgin Islands",
+    "alp": "B"
+  },
+  {
+    "is2": "BN",
+    "jpn": "ブルネイ・ダルサラーム",
+    "log": "bn",
+    "aka": "ハ",
+    "enm": "Brunei Darussalam",
+    "alp": "B"
+  },
+  {
+    "is2": "BG",
+    "jpn": "ブルガリア",
+    "log": "bg",
+    "aka": "ハ",
+    "enm": "Bulgaria",
+    "alp": "B"
+  },
+  {
+    "is2": "MM",
+    "jpn": "ミャンマー",
+    "log": "mm",
+    "aka": "マ",
+    "enm": "Myanmar",
+    "alp": "M"
+  },
+  {
+    "is2": "BI",
+    "jpn": "ブルンジ",
+    "log": "bi",
+    "aka": "ハ",
+    "enm": "Burundi",
+    "alp": "B"
+  },
+  {
+    "is2": "BY",
+    "jpn": "ベラルーシ",
+    "log": "by",
+    "aka": "ハ",
+    "enm": "Belarus",
+    "alp": "B"
+  },
+  {
+    "is2": "KH",
+    "jpn": "カンボジア",
+    "log": "kh",
+    "aka": "カ",
+    "enm": "Cambodia",
+    "alp": "C"
+  },
+  {
+    "is2": "CM",
+    "jpn": "カメルーン",
+    "log": "cm",
+    "aka": "カ",
+    "enm": "Cameroon",
+    "alp": "C"
+  },
+  {
+    "is2": "CA",
+    "jpn": "カナダ",
+    "log": "ca",
+    "aka": "カ",
+    "enm": "Canada",
+    "alp": "C"
+  },
+  {
+    "is2": "CV",
+    "jpn": "カーボベルデ",
+    "log": "cv",
+    "aka": "カ",
+    "enm": "Cabo Verde",
+    "alp": "C"
+  },
+  {
+    "is2": "KY",
+    "jpn": "ケイマン諸島",
+    "log": "ky",
+    "aka": "カ",
+    "enm": "Cayman Islands",
+    "alp": "C"
+  },
+  {
+    "is2": "CF",
+    "jpn": "中央アフリカ共和国",
+    "log": "cf",
+    "aka": "タ",
+    "enm": "Central African Republic",
+    "alp": "C"
+  },
+  {
+    "is2": "LK",
+    "jpn": "スリランカ",
+    "log": "lk",
+    "aka": "サ",
+    "enm": "Sri Lanka",
+    "alp": "S"
+  },
+  {
+    "is2": "TD",
+    "jpn": "チャド",
+    "log": "td",
+    "aka": "タ",
+    "enm": "Chad",
+    "alp": "C"
+  },
+  {
+    "is2": "CL",
+    "jpn": "チリ",
+    "log": "cl",
+    "aka": "タ",
+    "enm": "Chile",
+    "alp": "C"
+  },
+  {
+    "is2": "CN",
+    "jpn": "中華人民共和国",
+    "log": "cn",
+    "aka": "タ",
+    "enm": "China",
+    "alp": "C"
+  },
+  {
+    "is2": "CO",
+    "jpn": "コロンビア",
+    "log": "co",
+    "aka": "カ",
+    "enm": "Colombia",
+    "alp": "C"
+  },
+  {
+    "is2": "KM",
+    "jpn": "コモロ",
+    "log": "km",
+    "aka": "カ",
+    "enm": "Comoros",
+    "alp": "C"
+  },
+  {
+    "is2": "CG",
+    "jpn": "コンゴ共和国",
+    "log": "cg",
+    "aka": "カ",
+    "enm": "Congo",
+    "alp": "C"
+  },
+  {
+    "is2": "CD",
+    "jpn": "コンゴ民主共和国",
+    "log": "cd",
+    "aka": "カ",
+    "enm": "Dem. Rep. of the Congo",
+    "alp": "D"
+  },
+  {
+    "is2": "CR",
+    "jpn": "コスタリカ",
+    "log": "cr",
+    "aka": "カ",
+    "enm": "Costa Rica",
+    "alp": "C"
+  },
+  {
+    "is2": "HR",
+    "jpn": "クロアチア",
+    "log": "hr",
+    "aka": "カ",
+    "enm": "Croatia",
+    "alp": "C"
+  },
+  {
+    "is2": "CU",
+    "jpn": "キューバ",
+    "log": "cu",
+    "aka": "カ",
+    "enm": "Cuba",
+    "alp": "C"
+  },
+  {
+    "is2": "CY",
+    "jpn": "キプロス",
+    "log": "cy",
+    "aka": "カ",
+    "enm": "Cyprus",
+    "alp": "C"
+  },
+  {
+    "is2": "CZ",
+    "jpn": "チェコ",
+    "log": "cz",
+    "aka": "タ",
+    "enm": "Czechia",
+    "alp": "C"
+  },
+  {
+    "is2": "BJ",
+    "jpn": "ベナン",
+    "log": "bj",
+    "aka": "ハ",
+    "enm": "Benin",
+    "alp": "B"
+  },
+  {
+    "is2": "DK",
+    "jpn": "デンマーク",
+    "log": "dk",
+    "aka": "タ",
+    "enm": "Denmark",
+    "alp": "D"
+  },
+  {
+    "is2": "DM",
+    "jpn": "ドミニカ国",
+    "log": "dm",
+    "aka": "タ",
+    "enm": "Dominica",
+    "alp": "D"
+  },
+  {
+    "is2": "DO",
+    "jpn": "ドミニカ共和国",
+    "log": "do",
+    "aka": "タ",
+    "enm": "Dominican Republic",
+    "alp": "D"
+  },
+  {
+    "is2": "EC",
+    "jpn": "エクアドル",
+    "log": "ec",
+    "aka": "ア",
+    "enm": "Ecuador",
+    "alp": "E"
+  },
+  {
+    "is2": "SV",
+    "jpn": "エルサルバドル",
+    "log": "sv",
+    "aka": "ア",
+    "enm": "El Salvador",
+    "alp": "E"
+  },
+  {
+    "is2": "GQ",
+    "jpn": "赤道ギニア",
+    "log": "gq",
+    "aka": "サ",
+    "enm": "Equatorial Guinea",
+    "alp": "E"
+  },
+  {
+    "is2": "ET",
+    "jpn": "エチオピア",
+    "log": "et",
+    "aka": "ア",
+    "enm": "Ethiopia",
+    "alp": "E"
+  },
+  {
+    "is2": "ER",
+    "jpn": "エリトリア",
+    "log": "er",
+    "aka": "ア",
+    "enm": "Eritrea",
+    "alp": "E"
+  },
+  {
+    "is2": "EE",
+    "jpn": "エストニア",
+    "log": "ee",
+    "aka": "ア",
+    "enm": "Estonia",
+    "alp": "E"
+  },
+  {
+    "is2": "FO",
+    "jpn": "フェロー諸島",
+    "log": "fo",
+    "aka": "ハ",
+    "enm": "Faroe Islands",
+    "alp": "F"
+  },
+  {
+    "is2": "FJ",
+    "jpn": "フィジー",
+    "log": "fj",
+    "aka": "ハ",
+    "enm": "Fiji",
+    "alp": "F"
+  },
+  {
+    "is2": "FI",
+    "jpn": "フィンランド",
+    "log": "fi",
+    "aka": "ハ",
+    "enm": "Finland",
+    "alp": "F"
+  },
+  {
+    "is2": "FR",
+    "jpn": "フランス",
+    "log": "fr",
+    "aka": "ハ",
+    "enm": "France",
+    "alp": "F"
+  },
+  {
+    "is2": "PF",
+    "jpn": "フランス領ポリネシア",
+    "log": "pf",
+    "aka": "ハ",
+    "enm": "French Polynesia",
+    "alp": "F"
+  },
+  {
+    "is2": "DJ",
+    "jpn": "ジブチ",
+    "log": "dj",
+    "aka": "サ",
+    "enm": "Djibouti",
+    "alp": "D"
+  },
+  {
+    "is2": "GA",
+    "jpn": "ガボン",
+    "log": "ga",
+    "aka": "カ",
+    "enm": "Gabon",
+    "alp": "G"
+  },
+  {
+    "is2": "GE",
+    "jpn": "グルジア",
+    "log": "ge",
+    "aka": "カ",
+    "enm": "Georgia",
+    "alp": "G"
+  },
+  {
+    "is2": "GM",
+    "jpn": "ガンビア",
+    "log": "gm",
+    "aka": "カ",
+    "enm": "Gambia",
+    "alp": "G"
+  },
+  {
+    "is2": "PS",
+    "jpn": "パレスチナ",
+    "log": "ps",
+    "aka": "ハ",
+    "enm": "State of Palestine",
+    "alp": "S"
+  },
+  {
+    "is2": "DE",
+    "jpn": "ドイツ",
+    "log": "de",
+    "aka": "タ",
+    "enm": "Germany",
+    "alp": "G"
+  },
+  {
+    "is2": "GH",
+    "jpn": "ガーナ",
+    "log": "gh",
+    "aka": "カ",
+    "enm": "Ghana",
+    "alp": "G"
+  },
+  {
+    "is2": "GI",
+    "jpn": "ジブラルタル",
+    "log": "gi",
+    "aka": "サ",
+    "enm": "Gibraltar",
+    "alp": "G"
+  },
+  {
+    "is2": "KI",
+    "jpn": "キリバス",
+    "log": "ki",
+    "aka": "カ",
+    "enm": "Kiribati",
+    "alp": "K"
+  },
+  {
+    "is2": "GR",
+    "jpn": "ギリシャ",
+    "log": "gr",
+    "aka": "カ",
+    "enm": "Greece",
+    "alp": "G"
+  },
+  {
+    "is2": "GL",
+    "jpn": "グリーンランド",
+    "log": "gl",
+    "aka": "カ",
+    "enm": "Greenland",
+    "alp": "G"
+  },
+  {
+    "is2": "GD",
+    "jpn": "グレナダ",
+    "log": "gd",
+    "aka": "カ",
+    "enm": "Grenada",
+    "alp": "G"
+  },
+  {
+    "is2": "GU",
+    "jpn": "グアム",
+    "log": "gu",
+    "aka": "カ",
+    "enm": "Guam",
+    "alp": "G"
+  },
+  {
+    "is2": "GT",
+    "jpn": "グアテマラ",
+    "log": "gt",
+    "aka": "カ",
+    "enm": "Guatemala",
+    "alp": "G"
+  },
+  {
+    "is2": "GN",
+    "jpn": "ギニア",
+    "log": "gn",
+    "aka": "カ",
+    "enm": "Guinea",
+    "alp": "G"
+  },
+  {
+    "is2": "GY",
+    "jpn": "ガイアナ",
+    "log": "gy",
+    "aka": "カ",
+    "enm": "Guyana",
+    "alp": "G"
+  },
+  {
+    "is2": "HT",
+    "jpn": "ハイチ",
+    "log": "ht",
+    "aka": "ハ",
+    "enm": "Haiti",
+    "alp": "H"
+  },
+  {
+    "is2": "HN",
+    "jpn": "ホンジュラス",
+    "log": "hn",
+    "aka": "ハ",
+    "enm": "Honduras",
+    "alp": "H"
+  },
+  {
+    "is2": "HK",
+    "jpn": "香港",
+    "log": "hk",
+    "aka": "ハ",
+    "enm": "China, Hong Kong SAR",
+    "alp": "C"
+  },
+  {
+    "is2": "HU",
+    "jpn": "ハンガリー",
+    "log": "hu",
+    "aka": "ハ",
+    "enm": "Hungary",
+    "alp": "H"
+  },
+  {
+    "is2": "IS",
+    "jpn": "アイスランド",
+    "log": "is",
+    "aka": "ア",
+    "enm": "Iceland",
+    "alp": "I"
+  },
+  {
+    "is2": "IN",
+    "jpn": "インド",
+    "log": "in",
+    "aka": "ア",
+    "enm": "India",
+    "alp": "I"
+  },
+  {
+    "is2": "ID",
+    "jpn": "インドネシア",
+    "log": "id",
+    "aka": "ア",
+    "enm": "Indonesia",
+    "alp": "I"
+  },
+  {
+    "is2": "IR",
+    "jpn": "イラン",
+    "log": "ir",
+    "aka": "ア",
+    "enm": "Iran",
+    "alp": "I"
+  },
+  {
+    "is2": "IQ",
+    "jpn": "イラク",
+    "log": "iq",
+    "aka": "ア",
+    "enm": "Iraq",
+    "alp": "I"
+  },
+  {
+    "is2": "IE",
+    "jpn": "アイルランド",
+    "log": "ie",
+    "aka": "ア",
+    "enm": "Ireland",
+    "alp": "I"
+  },
+  {
+    "is2": "IL",
+    "jpn": "イスラエル",
+    "log": "il",
+    "aka": "ア",
+    "enm": "Israel",
+    "alp": "I"
+  },
+  {
+    "is2": "IT",
+    "jpn": "イタリア",
+    "log": "it",
+    "aka": "ア",
+    "enm": "Italy",
+    "alp": "I"
+  },
+  {
+    "is2": "CI",
+    "jpn": "コートジボワール",
+    "log": "ci",
+    "aka": "カ",
+    "enm": "Côte d'Ivoire",
+    "alp": "C"
+  },
+  {
+    "is2": "JM",
+    "jpn": "ジャマイカ",
+    "log": "jm",
+    "aka": "サ",
+    "enm": "Jamaica",
+    "alp": "J"
+  },
+  {
+    "is2": "JP",
+    "jpn": "日本",
+    "log": "jp",
+    "aka": "ナ",
+    "enm": "Japan",
+    "alp": "J"
+  },
+  {
+    "is2": "KZ",
+    "jpn": "カザフスタン",
+    "log": "kz",
+    "aka": "カ",
+    "enm": "Kazakhstan",
+    "alp": "K"
+  },
+  {
+    "is2": "JO",
+    "jpn": "ヨルダン",
+    "log": "jo",
+    "aka": "ヤ",
+    "enm": "Jordan",
+    "alp": "J"
+  },
+  {
+    "is2": "KE",
+    "jpn": "ケニア",
+    "log": "ke",
+    "aka": "カ",
+    "enm": "Kenya",
+    "alp": "K"
+  },
+  {
+    "is2": "KP",
+    "jpn": "朝鮮民主主義人民共和国",
+    "log": "kp",
+    "aka": "タ",
+    "enm": "Dem. People's Rep. of Korea",
+    "alp": "D"
+  },
+  {
+    "is2": "KR",
+    "jpn": "大韓民国",
+    "log": "kr",
+    "aka": "タ",
+    "enm": "Korea",
+    "alp": "K"
+  },
+  {
+    "is2": "XK",
+    "jpn": "コソボ共和国",
+    "log": "xk",
+    "aka": "カ",
+    "enm": "Kosovo (under UNSC res. 1244)",
+    "alp": "K"
+  },
+  {
+    "is2": "KW",
+    "jpn": "クウェート",
+    "log": "kw",
+    "aka": "カ",
+    "enm": "Kuwait",
+    "alp": "K"
+  },
+  {
+    "is2": "KG",
+    "jpn": "キルギス",
+    "log": "kg",
+    "aka": "カ",
+    "enm": "Kyrgyzstan",
+    "alp": "K"
+  },
+  {
+    "is2": "LA",
+    "jpn": "ラオス人民民主共和国",
+    "log": "la",
+    "aka": "ラ",
+    "enm": "Lao People's Dem. Republic",
+    "alp": "L"
+  },
+  {
+    "is2": "LB",
+    "jpn": "レバノン",
+    "log": "lb",
+    "aka": "ラ",
+    "enm": "Lebanon",
+    "alp": "L"
+  },
+  {
+    "is2": "LS",
+    "jpn": "レソト",
+    "log": "ls",
+    "aka": "ラ",
+    "enm": "Lesotho",
+    "alp": "L"
+  },
+  {
+    "is2": "LV",
+    "jpn": "ラトビア",
+    "log": "lv",
+    "aka": "ラ",
+    "enm": "Latvia",
+    "alp": "L"
+  },
+  {
+    "is2": "LR",
+    "jpn": "リベリア",
+    "log": "lr",
+    "aka": "ラ",
+    "enm": "Liberia",
+    "alp": "L"
+  },
+  {
+    "is2": "LY",
+    "jpn": "リビア",
+    "log": "ly",
+    "aka": "ラ",
+    "enm": "Libya",
+    "alp": "L"
+  },
+  {
+    "is2": "LI",
+    "jpn": "リヒテンシュタイン",
+    "log": "li",
+    "aka": "ラ",
+    "enm": "Liechtenstein",
+    "alp": "L"
+  },
+  {
+    "is2": "LT",
+    "jpn": "リトアニア",
+    "log": "lt",
+    "aka": "ラ",
+    "enm": "Lithuania",
+    "alp": "L"
+  },
+  {
+    "is2": "LU",
+    "jpn": "ルクセンブルク",
+    "log": "lu",
+    "aka": "ラ",
+    "enm": "Luxembourg",
+    "alp": "L"
+  },
+  {
+    "is2": "MO",
+    "jpn": "マカオ",
+    "log": "mo",
+    "aka": "マ",
+    "enm": "China, Macao SAR",
+    "alp": "C"
+  },
+  {
+    "is2": "MG",
+    "jpn": "マダガスカル",
+    "log": "mg",
+    "aka": "マ",
+    "enm": "Madagascar",
+    "alp": "M"
+  },
+  {
+    "is2": "MW",
+    "jpn": "マラウイ",
+    "log": "mw",
+    "aka": "マ",
+    "enm": "Malawi",
+    "alp": "M"
+  },
+  {
+    "is2": "MY",
+    "jpn": "マレーシア",
+    "log": "my",
+    "aka": "マ",
+    "enm": "Malaysia",
+    "alp": "M"
+  },
+  {
+    "is2": "MV",
+    "jpn": "モルディブ",
+    "log": "mv",
+    "aka": "マ",
+    "enm": "Maldives",
+    "alp": "M"
+  },
+  {
+    "is2": "ML",
+    "jpn": "マリ共和国",
+    "log": "ml",
+    "aka": "マ",
+    "enm": "Mali",
+    "alp": "M"
+  },
+  {
+    "is2": "MT",
+    "jpn": "マルタ",
+    "log": "mt",
+    "aka": "マ",
+    "enm": "Malta",
+    "alp": "M"
+  },
+  {
+    "is2": "MR",
+    "jpn": "モーリタニア",
+    "log": "mr",
+    "aka": "マ",
+    "enm": "Mauritania",
+    "alp": "M"
+  },
+  {
+    "is2": "MU",
+    "jpn": "モーリシャス",
+    "log": "mu",
+    "aka": "マ",
+    "enm": "Mauritius",
+    "alp": "M"
+  },
+  {
+    "is2": "MX",
+    "jpn": "メキシコ",
+    "log": "mx",
+    "aka": "マ",
+    "enm": "Mexico",
+    "alp": "M"
+  },
+  {
+    "is2": "MC",
+    "jpn": "モナコ",
+    "log": "mc",
+    "aka": "マ",
+    "enm": "Monaco",
+    "alp": "M"
+  },
+  {
+    "is2": "MN",
+    "jpn": "モンゴル",
+    "log": "mn",
+    "aka": "マ",
+    "enm": "Mongolia",
+    "alp": "M"
+  },
+  {
+    "is2": "MD",
+    "jpn": "モルドバ共和国",
+    "log": "md",
+    "aka": "マ",
+    "enm": "Moldova",
+    "alp": "M"
+  },
+  {
+    "is2": "ME",
+    "jpn": "モンテネグロ",
+    "log": "me",
+    "aka": "マ",
+    "enm": "Montenegro",
+    "alp": "M"
+  },
+  {
+    "is2": "MA",
+    "jpn": "モロッコ",
+    "log": "ma",
+    "aka": "マ",
+    "enm": "Morocco",
+    "alp": "M"
+  },
+  {
+    "is2": "MZ",
+    "jpn": "モザンビーク",
+    "log": "mz",
+    "aka": "マ",
+    "enm": "Mozambique",
+    "alp": "M"
+  },
+  {
+    "is2": "OM",
+    "jpn": "オマーン",
+    "log": "om",
+    "aka": "ア",
+    "enm": "Oman",
+    "alp": "O"
+  },
+  {
+    "is2": "NR",
+    "jpn": "ナウル",
+    "log": "nr",
+    "aka": "ナ",
+    "enm": "Nauru",
+    "alp": "N"
+  },
+  {
+    "is2": "NP",
+    "jpn": "ネパール",
+    "log": "np",
+    "aka": "ナ",
+    "enm": "Nepal",
+    "alp": "N"
+  },
+  {
+    "is2": "NL",
+    "jpn": "オランダ",
+    "log": "nl",
+    "aka": "ア",
+    "enm": "Netherlands",
+    "alp": "N"
+  },
+  {
+    "is2": "CW",
+    "jpn": "キュラソー島",
+    "log": "cw",
+    "aka": "カ",
+    "enm": "Curaçao",
+    "alp": "C"
+  },
+  {
+    "is2": "AW",
+    "jpn": "アルバ",
+    "log": "aw",
+    "aka": "ア",
+    "enm": "Aruba",
+    "alp": "A"
+  },
+  {
+    "is2": "SX",
+    "jpn": "シント・マールテン",
+    "log": "sx",
+    "aka": "サ",
+    "enm": "Sint Maarten (Dutch part)",
+    "alp": "S"
+  },
+  {
+    "is2": "NC",
+    "jpn": "ニューカレドニア",
+    "log": "nc",
+    "aka": "ナ",
+    "enm": "New Caledonia",
+    "alp": "N"
+  },
+  {
+    "is2": "VU",
+    "jpn": "バヌアツ",
+    "log": "vu",
+    "aka": "ハ",
+    "enm": "Vanuatu",
+    "alp": "V"
+  },
+  {
+    "is2": "NZ",
+    "jpn": "ニュージーランド",
+    "log": "nz",
+    "aka": "ナ",
+    "enm": "New Zealand",
+    "alp": "N"
+  },
+  {
+    "is2": "NI",
+    "jpn": "ニカラグア",
+    "log": "ni",
+    "aka": "ナ",
+    "enm": "Nicaragua",
+    "alp": "N"
+  },
+  {
+    "is2": "NE",
+    "jpn": "ニジェール",
+    "log": "ne",
+    "aka": "ナ",
+    "enm": "Niger",
+    "alp": "N"
+  },
+  {
+    "is2": "NG",
+    "jpn": "ナイジェリア",
+    "log": "ng",
+    "aka": "ナ",
+    "enm": "Nigeria",
+    "alp": "N"
+  },
+  {
+    "is2": "NO",
+    "jpn": "ノルウェー",
+    "log": "no",
+    "aka": "ナ",
+    "enm": "Norway",
+    "alp": "N"
+  },
+  {
+    "is2": "MP",
+    "jpn": "北マリアナ諸島",
+    "log": "mp",
+    "aka": "カ",
+    "enm": "Northern Mariana Islands",
+    "alp": "N"
+  },
+  {
+    "is2": "FM",
+    "jpn": "ミクロネシア連邦",
+    "log": "fm",
+    "aka": "マ",
+    "enm": "Micronesia",
+    "alp": "M"
+  },
+  {
+    "is2": "MH",
+    "jpn": "マーシャル諸島",
+    "log": "mh",
+    "aka": "マ",
+    "enm": "Marshall Islands",
+    "alp": "M"
+  },
+  {
+    "is2": "PW",
+    "jpn": "パラオ",
+    "log": "pw",
+    "aka": "ハ",
+    "enm": "Palau",
+    "alp": "P"
+  },
+  {
+    "is2": "PK",
+    "jpn": "パキスタン",
+    "log": "pk",
+    "aka": "ハ",
+    "enm": "Pakistan",
+    "alp": "P"
+  },
+  {
+    "is2": "PA",
+    "jpn": "パナマ",
+    "log": "pa",
+    "aka": "ハ",
+    "enm": "Panama",
+    "alp": "P"
+  },
+  {
+    "is2": "PG",
+    "jpn": "パプアニューギニア",
+    "log": "pg",
+    "aka": "ハ",
+    "enm": "Papua New Guinea",
+    "alp": "P"
+  },
+  {
+    "is2": "PY",
+    "jpn": "パラグアイ",
+    "log": "py",
+    "aka": "ハ",
+    "enm": "Paraguay",
+    "alp": "P"
+  },
+  {
+    "is2": "PE",
+    "jpn": "ペルー",
+    "log": "pe",
+    "aka": "ハ",
+    "enm": "Peru",
+    "alp": "P"
+  },
+  {
+    "is2": "PH",
+    "jpn": "フィリピン",
+    "log": "ph",
+    "aka": "ハ",
+    "enm": "Philippines",
+    "alp": "P"
+  },
+  {
+    "is2": "PL",
+    "jpn": "ポーランド",
+    "log": "pl",
+    "aka": "ハ",
+    "enm": "Poland",
+    "alp": "P"
+  },
+  {
+    "is2": "PT",
+    "jpn": "ポルトガル",
+    "log": "pt",
+    "aka": "ハ",
+    "enm": "Portugal",
+    "alp": "P"
+  },
+  {
+    "is2": "GW",
+    "jpn": "ギニアビサウ",
+    "log": "gw",
+    "aka": "カ",
+    "enm": "Guinea-Bissau",
+    "alp": "G"
+  },
+  {
+    "is2": "TL",
+    "jpn": "東ティモール",
+    "log": "tl",
+    "aka": "ハ",
+    "enm": "Timor-Leste",
+    "alp": "T"
+  },
+  {
+    "is2": "PR",
+    "jpn": "プエルトリコ",
+    "log": "pr",
+    "aka": "ハ",
+    "enm": "Puerto Rico",
+    "alp": "P"
+  },
+  {
+    "is2": "QA",
+    "jpn": "カタール",
+    "log": "qa",
+    "aka": "カ",
+    "enm": "Qatar",
+    "alp": "Q"
+  },
+  {
+    "is2": "RO",
+    "jpn": "ルーマニア",
+    "log": "ro",
+    "aka": "ラ",
+    "enm": "Romania",
+    "alp": "R"
+  },
+  {
+    "is2": "RU",
+    "jpn": "ロシア連邦",
+    "log": "ru",
+    "aka": "ラ",
+    "enm": "Russia",
+    "alp": "R"
+  },
+  {
+    "is2": "RW",
+    "jpn": "ルワンダ",
+    "log": "rw",
+    "aka": "ラ",
+    "enm": "Rwanda",
+    "alp": "R"
+  },
+  {
+    "is2": "KN",
+    "jpn": "セントクリストファー・ネイビス",
+    "log": "kn",
+    "aka": "サ",
+    "enm": "Saint Kitts and Nevis",
+    "alp": "S"
+  },
+  {
+    "is2": "LC",
+    "jpn": "セントルシア",
+    "log": "lc",
+    "aka": "サ",
+    "enm": "Saint Lucia",
+    "alp": "S"
+  },
+  {
+    "is2": "MF",
+    "jpn": "サン・マルタン (西インド諸島)",
+    "log": "mf",
+    "aka": "サ",
+    "enm": "Saint Martin (French part)",
+    "alp": "S"
+  },
+  {
+    "is2": "VC",
+    "jpn": "セントビンセント・グレナディーン",
+    "log": "vc",
+    "aka": "サ",
+    "enm": "Saint Vincent and the Grenadines",
+    "alp": "S"
+  },
+  {
+    "is2": "SM",
+    "jpn": "サンマリノ",
+    "log": "sm",
+    "aka": "サ",
+    "enm": "San Marino",
+    "alp": "S"
+  },
+  {
+    "is2": "ST",
+    "jpn": "サントメ・プリンシペ",
+    "log": "st",
+    "aka": "サ",
+    "enm": "Sao Tome and Principe",
+    "alp": "S"
+  },
+  {
+    "is2": "SA",
+    "jpn": "サウジアラビア",
+    "log": "sa",
+    "aka": "サ",
+    "enm": "Saudi Arabia",
+    "alp": "S"
+  },
+  {
+    "is2": "SN",
+    "jpn": "セネガル",
+    "log": "sn",
+    "aka": "サ",
+    "enm": "Senegal",
+    "alp": "S"
+  },
+  {
+    "is2": "RS",
+    "jpn": "セルビア",
+    "log": "rs",
+    "aka": "サ",
+    "enm": "Serbia",
+    "alp": "S"
+  },
+  {
+    "is2": "SC",
+    "jpn": "セーシェル",
+    "log": "sc",
+    "aka": "サ",
+    "enm": "Seychelles",
+    "alp": "S"
+  },
+  {
+    "is2": "SL",
+    "jpn": "シエラレオネ",
+    "log": "sl",
+    "aka": "サ",
+    "enm": "Sierra Leone",
+    "alp": "S"
+  },
+  {
+    "is2": "SG",
+    "jpn": "シンガポール",
+    "log": "sg",
+    "aka": "サ",
+    "enm": "Singapore",
+    "alp": "S"
+  },
+  {
+    "is2": "SK",
+    "jpn": "スロバキア",
+    "log": "sk",
+    "aka": "サ",
+    "enm": "Slovakia",
+    "alp": "S"
+  },
+  {
+    "is2": "VN",
+    "jpn": "ベトナム",
+    "log": "vn",
+    "aka": "ハ",
+    "enm": "Viet Nam",
+    "alp": "V"
+  },
+  {
+    "is2": "SI",
+    "jpn": "スロベニア",
+    "log": "si",
+    "aka": "サ",
+    "enm": "Slovenia",
+    "alp": "S"
+  },
+  {
+    "is2": "SO",
+    "jpn": "ソマリア",
+    "log": "so",
+    "aka": "サ",
+    "enm": "Somalia",
+    "alp": "S"
+  },
+  {
+    "is2": "ZA",
+    "jpn": "南アフリカ共和国",
+    "log": "za",
+    "aka": "マ",
+    "enm": "South Africa",
+    "alp": "S"
+  },
+  {
+    "is2": "ZW",
+    "jpn": "ジンバブエ",
+    "log": "zw",
+    "aka": "サ",
+    "enm": "Zimbabwe",
+    "alp": "Z"
+  },
+  {
+    "is2": "ES",
+    "jpn": "スペイン",
+    "log": "es",
+    "aka": "サ",
+    "enm": "Spain",
+    "alp": "S"
+  },
+  {
+    "is2": "SS",
+    "jpn": "南スーダン",
+    "log": "ss",
+    "aka": "マ",
+    "enm": "South Sudan",
+    "alp": "S"
+  },
+  {
+    "is2": "SD",
+    "jpn": "スーダン",
+    "log": "sd",
+    "aka": "サ",
+    "enm": "Sudan",
+    "alp": "S"
+  },
+  {
+    "is2": "SR",
+    "jpn": "スリナム",
+    "log": "sr",
+    "aka": "サ",
+    "enm": "Suriname",
+    "alp": "S"
+  },
+  {
+    "is2": "SZ",
+    "jpn": "スワジランド",
+    "log": "sz",
+    "aka": "サ",
+    "enm": "Eswatini",
+    "alp": "E"
+  },
+  {
+    "is2": "SE",
+    "jpn": "スウェーデン",
+    "log": "se",
+    "aka": "サ",
+    "enm": "Sweden",
+    "alp": "S"
+  },
+  {
+    "is2": "CH",
+    "jpn": "スイス",
+    "log": "ch",
+    "aka": "サ",
+    "enm": "Switzerland",
+    "alp": "S"
+  },
+  {
+    "is2": "SY",
+    "jpn": "シリア",
+    "log": "sy",
+    "aka": "サ",
+    "enm": "Syrian Arab Republic",
+    "alp": "S"
+  },
+  {
+    "is2": "TJ",
+    "jpn": "タジキスタン",
+    "log": "tj",
+    "aka": "タ",
+    "enm": "Tajikistan",
+    "alp": "T"
+  },
+  {
+    "is2": "TH",
+    "jpn": "タイ",
+    "log": "th",
+    "aka": "タ",
+    "enm": "Thailand",
+    "alp": "T"
+  },
+  {
+    "is2": "TG",
+    "jpn": "トーゴ",
+    "log": "tg",
+    "aka": "タ",
+    "enm": "Togo",
+    "alp": "T"
+  },
+  {
+    "is2": "TO",
+    "jpn": "トンガ",
+    "log": "to",
+    "aka": "タ",
+    "enm": "Tonga",
+    "alp": "T"
+  },
+  {
+    "is2": "TT",
+    "jpn": "トリニダード・トバゴ",
+    "log": "tt",
+    "aka": "タ",
+    "enm": "Trinidad and Tobago",
+    "alp": "T"
+  },
+  {
+    "is2": "AE",
+    "jpn": "アラブ首長国連邦",
+    "log": "ae",
+    "aka": "ア",
+    "enm": "United Arab Emirates",
+    "alp": "U"
+  },
+  {
+    "is2": "TN",
+    "jpn": "チュニジア",
+    "log": "tn",
+    "aka": "タ",
+    "enm": "Tunisia",
+    "alp": "T"
+  },
+  {
+    "is2": "TR",
+    "jpn": "トルコ",
+    "log": "tr",
+    "aka": "タ",
+    "enm": "Türkiye",
+    "alp": "T"
+  },
+  {
+    "is2": "TM",
+    "jpn": "トルクメニスタン",
+    "log": "tm",
+    "aka": "タ",
+    "enm": "Turkmenistan",
+    "alp": "T"
+  },
+  {
+    "is2": "TC",
+    "jpn": "タークス・カイコス諸島",
+    "log": "tc",
+    "aka": "タ",
+    "enm": "Turks and Caicos Islands",
+    "alp": "T"
+  },
+  {
+    "is2": "TV",
+    "jpn": "ツバル",
+    "log": "tv",
+    "aka": "タ",
+    "enm": "Tuvalu",
+    "alp": "T"
+  },
+  {
+    "is2": "UG",
+    "jpn": "ウガンダ",
+    "log": "ug",
+    "aka": "ア",
+    "enm": "Uganda",
+    "alp": "U"
+  },
+  {
+    "is2": "UA",
+    "jpn": "ウクライナ",
+    "log": "ua",
+    "aka": "ア",
+    "enm": "Ukraine",
+    "alp": "U"
+  },
+  {
+    "is2": "MK",
+    "jpn": "マケドニア共和国",
+    "log": "mk",
+    "aka": "マ",
+    "enm": "North Macedonia",
+    "alp": "N"
+  },
+  {
+    "is2": "EG",
+    "jpn": "エジプト",
+    "log": "eg",
+    "aka": "ア",
+    "enm": "Egypt",
+    "alp": "E"
+  },
+  {
+    "is2": "GB",
+    "jpn": "イギリス",
+    "log": "gb",
+    "aka": "ア",
+    "enm": "United Kingdom",
+    "alp": "U"
+  },
+  {
+    "is2": "IM",
+    "jpn": "マン島",
+    "log": "im",
+    "aka": "マ",
+    "enm": "Isle of Man",
+    "alp": "I"
+  },
+  {
+    "is2": "TZ",
+    "jpn": "タンザニア",
+    "log": "tz",
+    "aka": "タ",
+    "enm": "Tanzania",
+    "alp": "T"
+  },
+  {
+    "is2": "US",
+    "jpn": "アメリカ合衆国",
+    "log": "us",
+    "aka": "ア",
+    "enm": "United States",
+    "alp": "U"
+  },
+  {
+    "is2": "VI",
+    "jpn": "アメリカ領ヴァージン諸島",
+    "log": "vi",
+    "aka": "ア",
+    "enm": "United States Virgin Islands",
+    "alp": "U"
+  },
+  {
+    "is2": "BF",
+    "jpn": "ブルキナファソ",
+    "log": "bf",
+    "aka": "ハ",
+    "enm": "Burkina Faso",
+    "alp": "B"
+  },
+  {
+    "is2": "UY",
+    "jpn": "ウルグアイ",
+    "log": "uy",
+    "aka": "ア",
+    "enm": "Uruguay",
+    "alp": "U"
+  },
+  {
+    "is2": "UZ",
+    "jpn": "ウズベキスタン",
+    "log": "uz",
+    "aka": "ア",
+    "enm": "Uzbekistan",
+    "alp": "U"
+  },
+  {
+    "is2": "VE",
+    "jpn": "ベネズエラ",
+    "log": "ve",
+    "aka": "ハ",
+    "enm": "Venezuela",
+    "alp": "V"
+  },
+  {
+    "is2": "WS",
+    "jpn": "サモア",
+    "log": "ws",
+    "aka": "サ",
+    "enm": "Samoa",
+    "alp": "S"
+  },
+  {
+    "is2": "YE",
+    "jpn": "イエメン",
+    "log": "ye",
+    "aka": "ア",
+    "enm": "Yemen",
+    "alp": "Y"
+  },
+  {
+    "is2": "ZM",
+    "jpn": "ザンビア",
+    "log": "zm",
+    "aka": "サ",
+    "enm": "Zambia",
+    "alp": "Z"
+  }
+]
