@@ -300,7 +300,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                           <img src={'/img/wlogo/' + cell.getValue() + '.png'} width={18}></img>
                         )}
 
-                        <Link prefetch={false} href={'/country/' + cell.getValue()}>
+                        <Link prefetch={false} href={'/world/country/' + cell.getValue()}>
                           {cls1[cell.getValue()] ? cls1[cell.getValue()].ename : ''}
                         </Link>
                       </>
