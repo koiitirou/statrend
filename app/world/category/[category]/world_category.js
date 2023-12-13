@@ -68,7 +68,6 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
     },
     ...ssg1.tab[ssg1.def.tmx].columns_en,
   ];
-  console.log(columns);
   const [rowSelection, setRowSelection] = useState({});
   const [sorting, setSorting] = useState([]);
   const [value, setValue] = useState(ssg1.def.tmx);
