@@ -68,6 +68,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
     },
     ...ssg1.tab[ssg1.def.tmx].columns_en,
   ];
+  console.log(columns);
   const [rowSelection, setRowSelection] = useState({});
   const [sorting, setSorting] = useState([]);
   const [value, setValue] = useState(ssg1.def.tmx);
@@ -297,7 +298,10 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                     {i1 == 2 && (
                       <>
                         {cell.getValue() != 'XK' && (
-                          <img src={'/img/wlogo/' + cell.getValue() + '.png'} width={18}></img>
+                          <img
+                            src={'/img/wlogo/' + cell.getValue().toLowerCase() + '.png'}
+                            width={18}
+                          ></img>
                         )}
 
                         <Link prefetch={false} href={'/world/country/' + cell.getValue()}>
