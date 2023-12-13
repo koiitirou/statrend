@@ -1,33 +1,17 @@
 'use client';
 
 import Map1 from './world_map';
-import {
-  Box,
-  Typography,
-  Chip,
-  Card,
-  CardContent,
-  CardHeader,
-  CardActionArea,
-  Slider,
-} from '@mui/material';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import PublicIcon from '@mui/icons-material/Public';
-import EqualizerIcon from '@mui/icons-material/Equalizer';
-import PlaceIcon from '@mui/icons-material/Place';
-import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import VaccinesIcon from '@mui/icons-material/Vaccines';
+import { Box, Typography, Chip, Slider } from '@mui/material';
+
 import theme from 'theme';
 import Link from 'next/link';
 import classes from 'components/css/world.module.css';
 import { json } from 'd3-fetch';
 import { server } from 'components/data/config';
 import {
-  ColumnDef,
   flexRender,
   getCoreRowModel,
   useReactTable,
-  SortingState,
   getSortedRowModel,
 } from '@tanstack/react-table';
 import { useState, Fragment, useRef, useEffect, memo } from 'react';
@@ -167,9 +151,9 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
         if (i > 10) {
           return;
         }
-        if (data[v] != undefined && cls1[data[v].i] != undefined) {
-          did_list2.push(data[v].i);
-          dis_list2.push(cls1[data[v].i].ename);
+        if (data[v] != undefined && cls1[data[v].iso] != undefined) {
+          did_list2.push(data[v].iso);
+          dis_list2.push(cls1[data[v].iso].ename);
         }
       });
       setDid(did_list2);
@@ -183,17 +167,17 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
         var child2 = {};
         child2['year'] = v0;
         did_list1.forEach((v1, i1) => {
-          var th_categories = ydata.tab[v0].data.find((s0) => s0.i == did_list1[i1]);
+          var th_categories = ydata.tab[v0].data.find((s0) => s0.iso == did_list1[i1]);
           var th_categories_base = ydata.tab[time_list2[time_list2.length - 1]].data.find(
-            (s0) => s0.i == did_list1[i1],
+            (s0) => s0.iso == did_list1[i1],
           );
 
           if (th_categories && th_categories_base != undefined) {
             if (th_categories[graph.value] != '') {
               if (Array.isArray(th_categories[graph.value])) {
-                child2[cls1[th_categories_base.i].ename] = Number(th_categories[graph.value][0]);
+                child2[cls1[th_categories_base.iso].ename] = Number(th_categories[graph.value][0]);
               } else {
-                child2[cls1[th_categories_base.i].ename] = Number(th_categories[graph.value]);
+                child2[cls1[th_categories_base.iso].ename] = Number(th_categories[graph.value]);
               }
             }
           }

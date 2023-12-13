@@ -60,9 +60,9 @@ export default async function Page({ params }) {
   //////////////
   //////////////
   const graphList = [
-    { value: 'r', label: 'Rank', unit: '', rev: true },
-    { value: 'v', label: `${ssg1.def.tle}`, unit: `${ssg1.def.ute}`, rev: false },
-    { value: 'd', label: 'Change', unit: '%', rev: false },
+    { value: 'ran', label: 'Rank', unit: '', rev: true },
+    { value: 'val', label: `${ssg1.def.tle}`, unit: `${ssg1.def.ute}`, rev: false },
+    { value: 'dpf', label: 'Change', unit: '%', rev: false },
   ];
   const time_list2 = ssg1.def.tml;
 

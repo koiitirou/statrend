@@ -22,7 +22,7 @@ const color2 = ['black', 'black', 'black', 'black', 'black', 'white', 'white', '
 const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
   const [value, setValue] = useState(useMemo(() => ssg1.def.tmx));
   const [data, setData] = useState(useMemo(() => ssg1.tab[ssg1.def.tmx].data));
-  const [gid, setGid] = useState(data[0].i);
+  const [gid, setGid] = useState(data[0].iso);
   const [html1, setHtml1] = useState();
   const [content, setContent] = useState('');
   const [isClicked, setIsClicked] = useState(false);
@@ -35,12 +35,12 @@ const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
 
   useEffect(() => {
     if (isLoaded) {
-      var cur2 = ssg1.tab[value].data.find((s) => s.i == gid);
+      var cur2 = ssg1.tab[value].data.find((s) => s.iso == gid);
       var html2 = () => {
         return (
           <div>
             <Typography content='h6'>
-              {cur2 ? cls1[cur2.i].ename : ''} {value}
+              {cur2 ? cls1[cur2.iso].ename : ''} {value}
             </Typography>
 
             <Box sx={{ fontSize: { xs: '12px', sm: '14px' } }}>
@@ -55,7 +55,7 @@ const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
                     <td>{ssg1.def.ide}</td>
                     <td>
                       {cur2
-                        ? Number(cur2.v[0]).toLocaleString(undefined, {
+                        ? Number(cur2.val[0]).toLocaleString(undefined, {
                             maximumFractionDigits: 2,
                           })
                         : ''}
@@ -64,7 +64,7 @@ const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
                   </tr>
                   <tr>
                     <td>Rank</td>
-                    <td>{cur2 ? cur2.r : ''}</td>
+                    <td>{cur2 ? cur2.ran : ''}</td>
                   </tr>
                   <tr>
                     <td>Change</td>
@@ -73,21 +73,21 @@ const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
                         <span
                           className={
                             cur2
-                              ? cur2.d < 0
+                              ? cur2.dpf < 0
                                 ? mss.mi1
-                                : (cur2.d == 0) | (cur2.d == 'NaN')
+                                : (cur2.dpf == 0) | (cur2.dpf == 'NaN')
                                 ? mss.ne1
                                 : mss.pl1
                               : ''
                           }
                         >
-                          {cur2 ? ((cur2.d < 0) | (cur2.d == 'NaN') ? '' : '+') : ''}
+                          {cur2 ? ((cur2.dpf < 0) | (cur2.dpf == 'NaN') ? '' : '+') : ''}
                           {cur2
-                            ? cur2.d == 'NaN'
+                            ? cur2.dpf == 'NaN'
                               ? ''
-                              : cur2.d == 'Inf'
+                              : cur2.dpf == 'Inf'
                               ? 'Inf%'
-                              : `${Number(cur2.d).toFixed(2)}%`
+                              : `${Number(cur2.dpf).toFixed(2)}%`
                             : ''}
                         </span>
                       )}
@@ -209,7 +209,7 @@ const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
               {({ geographies }) =>
                 geographies.map((geo, i1) => {
                   const centroid = geoCentroid(geo);
-                  const cur = data.find((s) => s.i === geo.id);
+                  const cur = data.find((s) => s.iso === geo.id);
 
                   return (
                     <g key={'g' + i1}>
@@ -217,7 +217,7 @@ const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
                         key={geo.rsmKey}
                         geography={geo}
                         stroke='#909090'
-                        fill={cur ? colorScale1(cur.v[0]) : 'lightgrey'}
+                        fill={cur ? colorScale1(cur.val[0]) : 'lightgrey'}
                         onMouseEnter={() => {
                           if (!isClicked) {
                             setGid(geo.id);
