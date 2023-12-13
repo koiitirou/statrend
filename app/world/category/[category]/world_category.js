@@ -298,12 +298,9 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                     {i1 == 1 && flexRender(cell.column.columnDef.cell, cell.getContext())}
                     {i1 == 2 && (
                       <>
-                        {cell.getValue() != 'XK' && (
-                          <img
-                            src={'/img/wlogo/' + cell.getValue().toLowerCase() + '.png'}
-                            width={18}
-                          ></img>
-                        )}
+                        {/* {cell.getValue() != 'XK' && (
+                          <img src={'/img/wlogo/' + cell.getValue() } width={18}></img>
+                        )} */}
 
                         <Link prefetch={false} href={'/world/country/' + cell.getValue()}>
                           {cls1[cell.getValue()] ? cls1[cell.getValue()].ename : ''}

@@ -3,7 +3,6 @@ import ResBar from 'components/layout/resbar';
 import Content1 from './world_category';
 import wor_url1 from 'components/wor/wor_url1.json';
 import cls1 from 'components/wor/location_df10.json';
-// const array4 = [{ category: 'AG_LND_FRST_K2' }, { category: 'pop' }];
 
 const array4 = [];
 wor_url1.forEach((v, i) => {
