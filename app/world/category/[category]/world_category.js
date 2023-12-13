@@ -140,6 +140,8 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
     }
   };
 
+  console.log(data);
+  console.log(columns);
   ///////////for charts suiig
   ///////////////////////////////////////////////////
   const check_length = Object.keys(rowSelection).length;
