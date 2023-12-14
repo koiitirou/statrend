@@ -40,7 +40,7 @@ const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
         return (
           <div>
             <Typography content='h6'>
-              {cur2 ? cls1[cur2.i].ename : ''} {value}
+              {cur2 ? cls1[cur2.i].enm : ''} {value}
             </Typography>
 
             <Box sx={{ fontSize: { xs: '12px', sm: '14px' } }}>

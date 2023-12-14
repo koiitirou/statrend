@@ -31,6 +31,7 @@ import palette1 from 'components/data/palette.json';
 import Bc3 from 'components/layout/bc3';
 
 const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
+  console.log(ssg1);
   function IndeterminateCheckbox({ indeterminate, className = '', ...rest }) {
     const ref = useRef();
     useEffect(() => {
@@ -153,7 +154,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
         }
         if (data[v] != undefined && cls1[data[v].i] != undefined) {
           did_list2.push(data[v].i);
-          dis_list2.push(cls1[data[v].i].ename);
+          dis_list2.push(cls1[data[v].i].enm);
         }
       });
       setDid(did_list2);
@@ -175,9 +176,9 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
           if (th_categories && th_categories_base != undefined) {
             if (th_categories[graph.value] != '') {
               if (Array.isArray(th_categories[graph.value])) {
-                child2[cls1[th_categories_base.i].ename] = Number(th_categories[graph.value][0]);
+                child2[cls1[th_categories_base.i].enm] = Number(th_categories[graph.value][0]);
               } else {
-                child2[cls1[th_categories_base.i].ename] = Number(th_categories[graph.value]);
+                child2[cls1[th_categories_base.i].enm] = Number(th_categories[graph.value]);
               }
             }
           }
@@ -304,14 +305,11 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                     {i1 == 2 && (
                       <>
                         {cell.getValue() != 'XK' && (
-                          <img
-                            src={`/img/wlogo/${cls1[cell.getValue()].logo}.png`}
-                            width={18}
-                          ></img>
+                          <img src={`/img/wlogo/${cls1[cell.getValue()].log}.png`} width={18}></img>
                         )}
 
                         <Link prefetch={false} href={'/world/country/' + cell.getValue()}>
-                          {cls1[cell.getValue()] ? cls1[cell.getValue()].ename : ''}
+                          {cls1[cell.getValue()] ? cls1[cell.getValue()].enm : ''}
                         </Link>
                       </>
                     )}
