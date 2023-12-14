@@ -304,7 +304,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                     {i1 == 1 && flexRender(cell.column.columnDef.cell, cell.getContext())}
                     {i1 == 2 && (
                       <>
-                        {cell.getValue() != 'XK' && (
+                        {cell.getValue() != 'XK' && cls1[cell.getValue()] && (
                           <img src={`/img/wlogo/${cls1[cell.getValue()].log}.png`} width={18}></img>
                         )}
 
@@ -324,7 +324,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                             className={classes.p3}
                             style={{
                               width: cell.getValue() ? cell.getValue()[1] + '%' : '0',
-                              backgroundColor: cell.getValue() ? cls1[cell.getValue()[2]].lcr : '',
+                              // backgroundColor: cell.getValue() ? cls1[cell.getValue()[2]].lcr : '',
                             }}
                           ></div>
                         </div>

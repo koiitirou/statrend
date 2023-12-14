@@ -84,7 +84,7 @@ const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
         </Grid>
 
         {res2.it0[0] != undefined &&
-          res2.it0.map(({ nme, val, unt, url, rnk, tim }) => {
+          res2.it0.map(({ nm2, nme, val, unt, url, rnk, tim }) => {
             return (
               <React.Fragment key={url}>
                 <Grid item xs={4.5} borderTop={1} borderColor='#ddd'>
