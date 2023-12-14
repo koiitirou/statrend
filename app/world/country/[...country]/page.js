@@ -1,21 +1,20 @@
 import { server } from 'components/data/config';
 import ResBar from 'components/layout/resbar';
-import wor_url1 from 'components/wor/wor_url1.json';
-import cls1 from 'components/wor/location_df10.json';
-import wor_cnt from 'components/wor/wor_cnt.json';
+// import wor_url1 from 'components/wor/wor_url1.json';
+// import cls1 from 'components/wor/location_df10.json';
+// import wor_cnt from 'components/wor/wor_cnt.json';
 import wor_category1 from 'components/wor/wor_category1.json';
 import World_country from './world_country';
 import wor_path from 'components/wor/wor_path.json';
 // const array4 = [{ category: 'AG_LND_FRST_K2' }, { category: 'pop' }];
 
-const wor_category2 = wor_category1.concat({ lnk: '', ids: 0, nam: 'summary' });
 const array6 = [];
-wor_category2.forEach((s) => {
-  wor_cnt.forEach((t, i) => {
+wor_path.topic.forEach((s) => {
+  Object.keys(wor_path.country).forEach((t, i) => {
     if (i == 0) {
-      array6.push({ country: [t.is2, ''] });
+      array6.push({ country: [t, ''] });
     }
-    array6.push({ country: [t.is2, s.lnk] });
+    array6.push({ country: [t, s.ne1] });
   });
 });
 
@@ -45,8 +44,8 @@ export async function generateMetadata({ params }) {
   // read route params
   const { country } = params;
   //   const arr5 = array4.find((f) => f.category == category);
-  const cn1 = wor_cnt.find((s) => s.is2 == country[0]);
-  console.log(cn1);
+  // const cn1 = wor_cnt.find((s) => s.is2 == country[0]);
+  const cn1 = wor_path.country[country[0]];
 
   return {
     title: `${cn1.enm} data rankings - ${country[1] == undefined ? 'summary' : country[1]}`,
@@ -93,7 +92,7 @@ export default async function Page({ params }) {
       <ResBar />
       <World_country
         res2={res2}
-        wor_cnt={wor_cnt}
+        // wor_cnt={wor_cnt}
         country={country}
         wor_category1={wor_category1}
         array6={array6}

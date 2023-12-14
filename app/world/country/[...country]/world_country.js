@@ -11,11 +11,11 @@ const rep1 = {
   country: 'country',
 };
 
-const World_country = ({ res2, wor_cnt, country, wor_category1, array6, wor_path }) => {
-  console.log(wor_cnt);
-  console.log(array6);
-  console.log(wor_path);
-  console.log(wor_category1);
+const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
+  // console.log(res2);
+  // console.log(array6);
+  // console.log(wor_path);
+  // console.log(wor_category1);
   return (
     <Box
       sx={{
@@ -39,17 +39,17 @@ const World_country = ({ res2, wor_cnt, country, wor_category1, array6, wor_path
       >
         summary
       </Button>
-      {wor_category1.map(({ lnk, nam }) => {
+      {wor_path.topic.map((v, i) => {
         return (
-          <React.Fragment key={lnk + 'a'}>
+          <React.Fragment key={i + 'a'}>
             <Button
               color='secondary'
-              variant={country[1] == lnk ? 'contained' : 'outlined'}
+              variant={country[1] == v.ne1 ? 'contained' : 'outlined'}
               fontSize={{ xs: '13px', sm: '16px' }}
               // prefetch={false}
-              href={'/world/country/' + country[0] + '/' + lnk}
+              href={'/world/country/' + country[0] + '/' + v.ne1}
             >
-              {lnk}
+              {v.ne1}
             </Button>
           </React.Fragment>
         );
