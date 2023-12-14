@@ -5,6 +5,7 @@ import cls1 from 'components/wor/location_df10.json';
 import wor_cnt from 'components/wor/wor_cnt.json';
 import wor_category1 from 'components/wor/wor_category1.json';
 import World_country from './world_country';
+import wor_path from 'components/wor/wor_path.json';
 // const array4 = [{ category: 'AG_LND_FRST_K2' }, { category: 'pop' }];
 
 const wor_category2 = wor_category1.concat({ lnk: '', ids: 0, nam: 'summary' });
@@ -96,6 +97,7 @@ export default async function Page({ params }) {
         country={country}
         wor_category1={wor_category1}
         array6={array6}
+        wor_path={wor_path}
       />
       {/* <Content1
         did1={did1}
