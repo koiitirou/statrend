@@ -140,8 +140,6 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
     }
   };
 
-  console.log(data);
-  console.log(columns);
   ///////////for charts suiig
   ///////////////////////////////////////////////////
   const check_length = Object.keys(rowSelection).length;
@@ -153,9 +151,9 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
         if (i > 10) {
           return;
         }
-        if (data[v] != undefined && cls1[data[v].iso] != undefined) {
-          did_list2.push(data[v].iso);
-          dis_list2.push(cls1[data[v].iso].ename);
+        if (data[v] != undefined && cls1[data[v].i] != undefined) {
+          did_list2.push(data[v].i);
+          dis_list2.push(cls1[data[v].i].ename);
         }
       });
       setDid(did_list2);
@@ -169,17 +167,17 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
         var child2 = {};
         child2['year'] = v0;
         did_list1.forEach((v1, i1) => {
-          var th_categories = ydata.tab[v0].data.find((s0) => s0.iso == did_list1[i1]);
+          var th_categories = ydata.tab[v0].data.find((s0) => s0.i == did_list1[i1]);
           var th_categories_base = ydata.tab[time_list2[time_list2.length - 1]].data.find(
-            (s0) => s0.iso == did_list1[i1],
+            (s0) => s0.i == did_list1[i1],
           );
 
           if (th_categories && th_categories_base != undefined) {
             if (th_categories[graph.value] != '') {
               if (Array.isArray(th_categories[graph.value])) {
-                child2[cls1[th_categories_base.iso].ename] = Number(th_categories[graph.value][0]);
+                child2[cls1[th_categories_base.i].ename] = Number(th_categories[graph.value][0]);
               } else {
-                child2[cls1[th_categories_base.iso].ename] = Number(th_categories[graph.value]);
+                child2[cls1[th_categories_base.i].ename] = Number(th_categories[graph.value]);
               }
             }
           }
@@ -206,6 +204,14 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
       }}
     >
       <Bc3 rep1={rep1} />
+      <Typography variant='h1'>
+        {`${ssg1.def.ide} ${ssg1.def.tmn}-${ssg1.def.tmx} ranked by countries in the world`}
+      </Typography>
+      <Typography variant='body1'>
+        {' '}
+        {`Time-series interactive graphs, charts, and maps for ${ssg1.def.tmn}-${ssg1.def.tmx} explore the list of countries ranked by ${ssg1.def.ide}.`}
+      </Typography>
+      <Typography variant='body1'> {ssg1.def.dsc}</Typography>
       <Map1
         did1={did1}
         ssg1={ydata}
@@ -298,9 +304,12 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                     {i1 == 1 && flexRender(cell.column.columnDef.cell, cell.getContext())}
                     {i1 == 2 && (
                       <>
-                        {/* {cell.getValue() != 'XK' && (
-                          <img src={'/img/wlogo/' + cell.getValue() } width={18}></img>
-                        )} */}
+                        {cell.getValue() != 'XK' && (
+                          <img
+                            src={`/img/wlogo/${cls1[cell.getValue()].logo}.png`}
+                            width={18}
+                          ></img>
+                        )}
 
                         <Link prefetch={false} href={'/world/country/' + cell.getValue()}>
                           {cls1[cell.getValue()] ? cls1[cell.getValue()].ename : ''}

@@ -1,20 +1,24 @@
 import { server } from 'components/data/config';
 import ResBar from 'components/layout/resbar';
 import Content1 from './world_category';
-import wor_url1 from 'components/wor/wor_url1.json';
-import cls1 from 'components/wor/location_df10.json';
-
+// import wor_url1 from 'components/wor/wor_url1.json';
+// import cls1 from 'components/wor/location_df10.json';
+import wor_path from 'components/wor/wor_path.json';
+const cls1 = wor_path.country;
 const array4 = [];
-wor_url1.forEach((v, i) => {
-  v.itm.forEach((v1, i1) => {
-    var child1 = {};
-    child1['category'] = v1.url;
-    child1['em1'] = v1.em1;
-    child1['tmn'] = v1.tmn;
-    child1['tmx'] = v1.tmx;
-    array4.push(child1);
-  });
+wor_path.path.forEach((v, i) => {
+  array4.push(v.params);
 });
+// wor_url1.forEach((v, i) => {
+//   v.itm.forEach((v1, i1) => {
+//     var child1 = {};
+//     child1['category'] = v1.url;
+//     child1['em1'] = v1.em1;
+//     child1['tmn'] = v1.tmn;
+//     child1['tmx'] = v1.tmx;
+//     array4.push(child1);
+//   });
+// });
 
 // export const metadata = {
 //   title:
@@ -59,9 +63,9 @@ export default async function Page({ params }) {
   //////////////
   //////////////
   const graphList = [
-    { value: 'ran', label: 'Rank', unit: '', rev: true },
-    { value: 'val', label: `${ssg1.def.tle}`, unit: `${ssg1.def.ute}`, rev: false },
-    { value: 'dpf', label: 'Change', unit: '%', rev: false },
+    { value: 'r', label: 'Rank', unit: '', rev: true },
+    { value: 'v', label: `${ssg1.def.tle}`, unit: `${ssg1.def.ute}`, rev: false },
+    { value: 'd', label: 'Change', unit: '%', rev: false },
   ];
   const time_list2 = ssg1.def.tml;
 
@@ -75,6 +79,8 @@ export default async function Page({ params }) {
         graphList={graphList}
         time_list2={time_list2}
         cls1={cls1}
+        array4={array4}
+        wor_path={wor_path}
       />
     </>
   );
