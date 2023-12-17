@@ -21,7 +21,6 @@ const World_rank = () => {
   const rep1 = {
     world: 'world ranking',
   };
-  console.log(wor1);
   return (
     <Box
       sx={{
