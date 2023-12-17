@@ -31,7 +31,7 @@ const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
     if (isLoaded) {
       setData(ssg1.tab[value].data);
     }
-  }, [ssg1, value]);
+  }, [ssg1, value, isLoaded]);
 
   useEffect(() => {
     if (isLoaded) {
@@ -102,7 +102,7 @@ const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
       setHtml1(html2);
       setContent(html2);
     }
-  }, [value, gid]);
+  }, [value, gid, ssg1, cls1, isLoaded]);
 
   const minmax1 = [ssg1.def.vmn, ssg1.def.vmx];
   const colorScale1 = scaleQuantize().domain(minmax1).range(color1);

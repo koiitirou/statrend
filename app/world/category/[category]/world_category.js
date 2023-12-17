@@ -159,7 +159,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
       setDid(did_list2);
       setDnm(dis_list2);
     }
-  }, [check_length, ydata]);
+  }, [check_length, ydata, cls1, rowSelection, data]);
   useEffect(() => {
     if (Object.keys(ydata.tab).length > 1 && did_list1 != undefined) {
       var child1 = [];
@@ -187,7 +187,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
 
       setChartData(child1);
     }
-  }, [did_list1, graph]);
+  }, [did_list1, graph, cls1, time_list2, ydata]);
 
   const rep1 = {
     world: 'world ranking',
