@@ -21,6 +21,7 @@ const World_rank = () => {
   const rep1 = {
     world: 'world ranking',
   };
+  console.log(wor1);
   return (
     <Box
       sx={{
@@ -98,39 +99,39 @@ const World_rank = () => {
                 </Grid>
                 <Grid item xs={1.8} sm={1.4} borderTop={1} borderColor='#ddd'>
                   <Typography component='body1' fontSize={{ xs: '12px', sm: '14px' }}>
-                    <img src={'/img/wlogo/' + s2.dat[0].log + '.png'} width={18}></img>
+                    <img src={'/img/wlogo/' + s2.dat[0].l + '.png'} width={18}></img>
                     <Link
-                      href={'/world/country/' + s2.dat[0].is2}
+                      href={'/world/country/' + s2.dat[0].i}
                       prefetch={false}
                       style={{ textDecoration: 'none' }}
                     >
-                      {s2.dat[0].enm}
+                      {s2.dat[0].e}
                     </Link>
                   </Typography>
                 </Grid>
                 <Grid item xs={1.8} sm={1.4} borderTop={1} borderColor='#ddd'>
                   <Typography component='body1' fontSize={{ xs: '12px', sm: '14px' }}>
-                    <img src={'/img/wlogo/' + s2.dat[1].log + '.png'} width={18}></img>
+                    <img src={'/img/wlogo/' + s2.dat[1].l + '.png'} width={18}></img>
 
                     <Link
-                      href={'/world/country/' + s2.dat[1].is2}
+                      href={'/world/country/' + s2.dat[1].i}
                       prefetch={false}
                       style={{ textDecoration: 'none' }}
                     >
-                      {s2.dat[1].enm}
+                      {s2.dat[1].e}
                     </Link>
                   </Typography>
                 </Grid>
                 <Grid item xs={1.8} sm={1.4} borderTop={1} borderColor='#ddd'>
                   <Typography component='body1' fontSize={{ xs: '12px', sm: '14px' }}>
-                    <img src={'/img/wlogo/' + s2.dat[2].log + '.png'} width={18}></img>
+                    <img src={'/img/wlogo/' + s2.dat[2].l + '.png'} width={18}></img>
 
                     <Link
-                      href={'/world/country/' + s2.dat[2].is2}
+                      href={'/world/country/' + s2.dat[2].i}
                       prefetch={false}
                       style={{ textDecoration: 'none' }}
                     >
-                      {s2.dat[2].enm}
+                      {s2.dat[2].e}
                     </Link>
                   </Typography>
                 </Grid>
@@ -143,14 +144,14 @@ const World_rank = () => {
                   display={{ xs: 'none', sm: 'block' }}
                 >
                   <Typography component='body1' fontSize={{ xs: '12px', sm: '14px' }}>
-                    <img src={'/img/wlogo/' + s2.dat[3].log + '.png'} width={18}></img>
+                    <img src={'/img/wlogo/' + s2.dat[3].l + '.png'} width={18}></img>
 
                     <Link
-                      href={'/world/country/' + s2.dat[3].is2}
+                      href={'/world/country/' + s2.dat[3].i}
                       prefetch={false}
                       style={{ textDecoration: 'none' }}
                     >
-                      {s2.dat[3].enm}
+                      {s2.dat[3].e}
                     </Link>
                   </Typography>
                 </Grid>
