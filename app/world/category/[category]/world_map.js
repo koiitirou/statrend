@@ -19,9 +19,9 @@ const color1 = [
 import { useMemo, useState, useEffect } from 'react';
 const color2 = ['black', 'black', 'black', 'black', 'black', 'white', 'white', 'white', 'white'];
 
-const Map1 = ({ ssg1, marks, cls1, time_list2, did1, isLoaded }) => {
-  const [value, setValue] = useState(useMemo(() => ssg1.def.tmx));
-  const [data, setData] = useState(useMemo(() => ssg1.tab[ssg1.def.tmx].data));
+const Map1 = ({ ssg1, marks, cls1, isLoaded }) => {
+  const [value, setValue] = useState(() => ssg1.def.tmx);
+  const [data, setData] = useState(() => ssg1.tab[ssg1.def.tmx].data);
   const [gid, setGid] = useState(data[0].i);
   const [html1, setHtml1] = useState();
   const [content, setContent] = useState('');

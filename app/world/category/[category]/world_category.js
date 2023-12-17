@@ -37,7 +37,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
       if (typeof indeterminate === 'boolean') {
         ref.current.indeterminate = !rest.checked && indeterminate;
       }
-    }, [ref, indeterminate]);
+    }, [ref, indeterminate, rest]);
 
     return <input type='checkbox' ref={ref} className={className + ' cursor-pointer'} {...rest} />;
   }
@@ -78,7 +78,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
   const [did_list1, setDid] = useState([]);
   const [dis_list1, setDnm] = useState([]);
   const [graph, setGraph] = useState(graphList[1]);
-
+  console.log(data);
   useEffect(() => {
     setRowSelection({});
   }, [value]);
@@ -92,7 +92,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
       1: true,
       2: true,
     });
-  }, []);
+  }, [did1]);
   useEffect(() => {
     if (isLoaded & (ydata != null)) {
       setData(ydata.tab[value].data);
@@ -304,7 +304,11 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                     {i1 == 2 && (
                       <>
                         {cell.getValue() != 'XK' && cls1[cell.getValue()] && (
-                          <img src={`/img/wlogo/${cls1[cell.getValue()].log}.png`} width={18}></img>
+                          <img
+                            src={`/img/wlogo/${cls1[cell.getValue()].log}.png`}
+                            width={18}
+                            alt={cell.getValue()}
+                          ></img>
                         )}
 
                         <Link prefetch={false} href={'/world/country/' + cell.getValue()}>
