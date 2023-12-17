@@ -2,7 +2,7 @@
 
 import Bc3 from 'components/layout/bc3';
 import theme from 'theme';
-import { Box, Typography, Grid, Button } from '@mui/material';
+import { Box, Typography, Grid, Button, Slider } from '@mui/material';
 import React from 'react';
 import Link from 'next/link';
 
