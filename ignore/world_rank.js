@@ -1,6 +1,16 @@
 'use client';
 import Bc3 from 'components/layout/bc3';
-import { Box, Typography, Grid } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Chip,
+  Card,
+  CardContent,
+  CardHeader,
+  CardActionArea,
+  Slider,
+  Grid,
+} from '@mui/material';
 import Link from 'next/link';
 import theme from 'theme';
 import { Fragment } from 'react';
