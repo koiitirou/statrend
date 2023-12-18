@@ -6,11 +6,17 @@ import theme from 'theme';
 import { Fragment } from 'react';
 import wor1 from 'components/wor/world_ranking_summary.json';
 import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded';
-
+import {
+  flexRender,
+  getCoreRowModel,
+  useReactTable,
+  getSortedRowModel,
+} from '@tanstack/react-table';
 const World_rank = () => {
   const rep1 = {
     world: 'world ranking',
   };
+  //console.log()
   return (
     <Box
       sx={{
