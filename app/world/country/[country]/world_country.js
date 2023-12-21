@@ -16,7 +16,6 @@ import {
   getFacetedUniqueValues,
   getFacetedMinMaxValues,
   getPaginationRowModel,
-  sortingFns,
 } from '@tanstack/react-table';
 const rep1 = {
   world: 'world ranking',
@@ -35,11 +34,11 @@ const fuzzyFilter = (row, columnId, value, addMeta) => {
   // Return if the item should be filtered in/out
   return itemRank.passed;
 };
-const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
-  const categoryValue = country[1] == 'Summary' ? '' : country[1];
+const World_country = ({ res2, country, enm }) => {
+  const categoryValue = '';
 
-  const cls1 = wor_path.country;
-  const enm = cls1[country[0]].enm;
+  // const cls1 = wor_path.country;
+  // const enm = cls1[country].enm;
   const [columnFilters, setColumnFilters] = useState([{ id: 'c', value: categoryValue }]);
   const [globalFilter, setGlobalFilter] = useState('');
   const [sorting, setSorting] = useState([]);
@@ -99,14 +98,14 @@ const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
       <Bc3 rep1={rep1} />
       <Typography variant='h1'>
         {enm}
-        {"'"}s Statistical Data Ranking - {country[1]}
+        {"'"}s Statistical Data Ranking - summary
       </Typography>
-      <Button
+      {/* <Button
         color='secondary'
-        variant={country[1] == 'Summary' ? 'contained' : 'outlined'}
+        variant={country == 'Summary' ? 'contained' : 'outlined'}
         fontSize={{ xs: '13px', sm: '16px' }}
         //prefetch={false}
-        href={'/world/country/' + country[0]}
+        href={'/world/country/' + country}
       >
         summary
       </Button>
@@ -118,13 +117,13 @@ const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
               variant={country[1] == v.ne1 ? 'contained' : 'outlined'}
               fontSize={{ xs: '13px', sm: '16px' }}
               // prefetch={false}
-              href={'/world/country/' + country[0] + '/' + v.ne1}
+              href={'/world/country/' + country + '/' + v.ne1}
             >
               {v.ne1}
             </Button>
           </Fragment>
         );
-      })}
+      })} */}
       <Typography variant='body1'>
         This page summarizes {enm}
         {"'"}s statistical data rankings such as economy, area, population, etc.
@@ -132,7 +131,7 @@ const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
 
       <Typography variant='h2'>
         {enm}
-        {"'"}s rankings for statistics - {country[1]}
+        {"'"}s rankings for statistics - summary
       </Typography>
       <Box className={classes.retable}>
         <table className={[classes.table1, classes.world_en, classes.world1].join(' ')}>
