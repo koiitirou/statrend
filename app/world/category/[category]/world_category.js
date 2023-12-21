@@ -14,7 +14,7 @@ import {
   useReactTable,
   getSortedRowModel,
 } from '@tanstack/react-table';
-import { useState, Fragment, useRef, useEffect, memo } from 'react';
+import { useState, Fragment, useRef, useEffect } from 'react';
 import {
   LineChart,
   Line,

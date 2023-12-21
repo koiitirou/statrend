@@ -79,8 +79,8 @@ export default async function Page({ params }) {
         graphList={graphList}
         time_list2={time_list2}
         cls1={cls1}
-        array4={array4}
-        wor_path={wor_path}
+        // array4={array4}
+        // wor_path={wor_path}
       />
     </>
   );

@@ -34,11 +34,11 @@ const fuzzyFilter = (row, columnId, value, addMeta) => {
   // Return if the item should be filtered in/out
   return itemRank.passed;
 };
-const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
+const World_country = ({ res2, country, enm }) => {
   const categoryValue = '';
 
-  const cls1 = wor_path.country;
-  const enm = cls1[country].enm;
+  // const cls1 = wor_path.country;
+  // const enm = cls1[country].enm;
   const [columnFilters, setColumnFilters] = useState([{ id: 'c', value: categoryValue }]);
   const [globalFilter, setGlobalFilter] = useState('');
   const [sorting, setSorting] = useState([]);
@@ -100,7 +100,7 @@ const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
         {enm}
         {"'"}s Statistical Data Ranking - summary
       </Typography>
-      <Button
+      {/* <Button
         color='secondary'
         variant={country == 'Summary' ? 'contained' : 'outlined'}
         fontSize={{ xs: '13px', sm: '16px' }}
@@ -123,7 +123,7 @@ const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
             </Button>
           </Fragment>
         );
-      })}
+      })} */}
       <Typography variant='body1'>
         This page summarizes {enm}
         {"'"}s statistical data rankings such as economy, area, population, etc.

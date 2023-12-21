@@ -8,6 +8,7 @@ import World_country from './world_country';
 import wor_path from 'components/wor/wor_path.json';
 // const array4 = [{ category: 'AG_LND_FRST_K2' }, { category: 'pop' }];
 
+const cls1 = wor_path.country;
 const array6 = [];
 
 Object.keys(wor_path.country).forEach((t, i) => {
@@ -89,6 +90,7 @@ export default async function Page({ params }) {
   //   ];
   //   const time_list2 = ssg1.def.tml;
 
+  const enm = cls1[country].enm;
   return (
     <>
       <ResBar />
@@ -96,9 +98,10 @@ export default async function Page({ params }) {
         res2={res2}
         // wor_cnt={wor_cnt}
         country={country}
-        wor_category1={wor_category1}
-        array6={array6}
-        wor_path={wor_path}
+        // wor_category1={wor_category1}
+        // array6={array6}
+        enm={enm}
+        // wor_path={wor_path}
       />
       {/* <Content1
         did1={did1}
