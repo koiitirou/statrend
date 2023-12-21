@@ -8,6 +8,7 @@ import classes from 'components/css/ranking.module.css';
 import Link from 'next/link';
 import { json } from 'd3-fetch';
 import { server } from 'components/data/config';
+import { rankItem } from '@tanstack/match-sorter-utils';
 import {
   flexRender,
   getCoreRowModel,
@@ -144,6 +145,13 @@ const World_country = ({ res2, country, enm }) => {
         {"'"}s rankings for statistics - summary
       </Typography>
       <Box className={classes.retable}>
+        <div>
+          <DebouncedInput
+            value={globalFilter ?? ''}
+            onChange={(value) => setGlobalFilter(String(value))}
+            placeholder='Search all columns...'
+          />
+        </div>
         <table className={[classes.table1, classes.world_en, classes.world1].join(' ')}>
           <thead>
             {table.getHeaderGroups().map((headerGroup) => (
