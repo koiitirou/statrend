@@ -9,14 +9,18 @@ import wor_path from 'components/wor/wor_path.json';
 // const array4 = [{ category: 'AG_LND_FRST_K2' }, { category: 'pop' }];
 
 const array6 = [];
-wor_path.topic.forEach((s) => {
-  Object.keys(wor_path.country).forEach((t, i) => {
-    if (i == 0) {
-      array6.push({ country: [t, ''] });
-    }
-    array6.push({ country: [t, s.ne1] });
-  });
+
+Object.keys(wor_path.country).forEach((t, i) => {
+  array6.push({ country: t });
 });
+// wor_path.topic.forEach((s) => {
+//   Object.keys(wor_path.country).forEach((t, i) => {
+//     if (i == 0) {
+//       array6.push({ country: [t, ''] });
+//     }
+//     array6.push({ country: [t, s.ne1] });
+//   });
+// });
 
 // const array4 = [];
 // wor_url1.forEach((v, i) => {
@@ -45,14 +49,12 @@ export async function generateMetadata({ params }) {
   const { country } = params;
   //   const arr5 = array4.find((f) => f.category == category);
   // const cn1 = wor_cnt.find((s) => s.is2 == country[0]);
-  const cn1 = wor_path.country[country[0]];
+  const cn1 = wor_path.country[country];
 
   return {
-    title: `${cn1.enm} data rankings - ${country[1] == undefined ? 'summary' : country[1]}`,
+    title: `${cn1.enm} data rankings - summary`,
     // description: `List of countries in the world ranked by ${arr5.em1} with time-series graphs, charts, and interactive maps for ${arr5.tmn}-${arr5.tmx}.`,
-    description: `This page summarizes ${cn1.enm} statistical data rankings (${
-      country[1] == undefined ? 'summary' : country[1]
-    }).`,
+    description: `This page summarizes ${cn1.enm} statistical data rankings (summary).`,
   };
 }
 
@@ -60,11 +62,9 @@ export default async function Page({ params }) {
   const { country } = params;
   // const res1 = await fetch(`${server}/rn2/${country[0]}_${country[1]}.json`);
   // const res1 = await fetch(`${server}/rn3/${country[0]}_en.json`);
-  const res1 = await fetch(`${server}/rn3_100/${country[0]}_en.json`);
+  const res1 = await fetch(`${server}/rn3_100/${country}_en.json`);
   const res2 = await res1.json();
-  if (country[1] == undefined) {
-    country[1] = 'Summary';
-  }
+
   //   const res = await fetch(`${server}/wo2/${category}_ssg.json`);
   //   const ssg1 = await res.json();
   //   const did1 = category;
