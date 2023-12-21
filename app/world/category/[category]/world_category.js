@@ -1,6 +1,6 @@
 'use client';
 
-// import Map1 from './world_map';
+import Map1 from './world_map';
 import { Box, Typography, Chip, Slider } from '@mui/material';
 
 import theme from 'theme';
@@ -211,7 +211,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
         {`Time-series interactive graphs, charts, and maps for ${ssg1.def.tmn}-${ssg1.def.tmx} explore the list of countries ranked by ${ssg1.def.ide}.`}
       </Typography>
       <Typography variant='body1'> {`${ssg1.def.dsc}`}</Typography>
-      {/* {isLoaded && (
+      {isLoaded && (
         <Map1
           did1={did1}
           ssg1={ydata}
@@ -221,7 +221,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
           cls1={cls1}
           isLoaded={isLoaded}
         />
-      )} */}
+      )}
       {chartData != [] && (
         <Suiig
           ssg1={ssg1}
