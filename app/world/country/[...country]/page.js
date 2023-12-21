@@ -59,7 +59,8 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const { country } = params;
   // const res1 = await fetch(`${server}/rn2/${country[0]}_${country[1]}.json`);
-  const res1 = await fetch(`${server}/rn3/${country[0]}_en.json`);
+  // const res1 = await fetch(`${server}/rn3/${country[0]}_en.json`);
+  const res1 = await fetch(`${server}/rn3_100/${country[0]}_en.json`);
   const res2 = await res1.json();
   if (country[1] == undefined) {
     country[1] = 'Summary';
