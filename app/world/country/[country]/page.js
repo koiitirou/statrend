@@ -3,7 +3,7 @@ import ResBar from 'components/layout/resbar';
 // import wor_url1 from 'components/wor/wor_url1.json';
 // import cls1 from 'components/wor/location_df10.json';
 // import wor_cnt from 'components/wor/wor_cnt.json';
-import wor_category1 from 'components/wor/wor_category1.json';
+// import wor_category1 from 'components/wor/wor_category1.json';
 import World_country from './world_country';
 import wor_path from 'components/wor/wor_path.json';
 // const array4 = [{ category: 'AG_LND_FRST_K2' }, { category: 'pop' }];

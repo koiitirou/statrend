@@ -6,6 +6,8 @@ import { Box, Typography, Grid, Button } from '@mui/material';
 import { useState, useEffect, useMemo, Fragment } from 'react';
 import classes from 'components/css/ranking.module.css';
 import Link from 'next/link';
+import { json } from 'd3-fetch';
+import { server } from 'components/data/config';
 import {
   flexRender,
   getCoreRowModel,
@@ -39,10 +41,18 @@ const World_country = ({ res2, country, enm }) => {
 
   // const cls1 = wor_path.country;
   // const enm = cls1[country].enm;
+  const [data, setData] = useState(res2.data);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [columnFilters, setColumnFilters] = useState([{ id: 'c', value: categoryValue }]);
   const [globalFilter, setGlobalFilter] = useState('');
   const [sorting, setSorting] = useState([]);
 
+  useEffect(() => {
+    json(`${server}/rn3/${country}_en.json`).then((collection) => {
+      setData(collection.data);
+    });
+    setIsLoaded(true);
+  }, []);
   function NumberSort2(rowA, rowB, columnId) {
     const numA = Number(rowA.getValue(columnId)[0]);
     const numB = Number(rowB.getValue(columnId)[0]);
@@ -50,7 +60,7 @@ const World_country = ({ res2, country, enm }) => {
   }
 
   const columns = res2.columns;
-  const data = res2.data;
+
   columns[3].sortingFn = NumberSort2;
   const table = useReactTable({
     data,
