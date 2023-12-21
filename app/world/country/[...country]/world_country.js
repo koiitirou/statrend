@@ -157,7 +157,7 @@ const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
                             desc: ' ▼',
                           }[header.column.getIsSorted()] ?? null}
                         </div>
-                        {ih == 0 && header.column.getCanFilter() ? (
+                        {(ih == 0 || ih == 1) && header.column.getCanFilter() ? (
                           <div>
                             <Filter column={header.column} table={table} />
                           </div>
