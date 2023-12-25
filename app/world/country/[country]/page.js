@@ -8,6 +8,11 @@ import World_country from './world_country';
 import wor_path from 'components/wor/wor_path.json';
 // const array4 = [{ category: 'AG_LND_FRST_K2' }, { category: 'pop' }];
 
+var options_topic = [];
+wor_path.topic.forEach((v) => {
+  options_topic.push(v.ne1);
+});
+
 const cls1 = wor_path.country;
 const array6 = [];
 
@@ -63,7 +68,7 @@ export default async function Page({ params }) {
   const { country } = params;
   // const res1 = await fetch(`${server}/rn2/${country[0]}_${country[1]}.json`);
   // const res1 = await fetch(`${server}/rn3/${country[0]}_en.json`);
-  const res1 = await fetch(`${server}/rn3_100/${country}_en.json`);
+  const res1 = await fetch(`${server}/rn4/${country}_en.json`);
   const res2 = await res1.json();
 
   //   const res = await fetch(`${server}/wo2/${category}_ssg.json`);
@@ -101,6 +106,7 @@ export default async function Page({ params }) {
         // wor_category1={wor_category1}
         // array6={array6}
         enm={enm}
+        options_topic={options_topic}
         // wor_path={wor_path}
       />
       {/* <Content1

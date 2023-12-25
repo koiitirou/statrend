@@ -1,5 +1,6 @@
 'use client';
 
+import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded';
 import Bc3 from 'components/layout/bc3';
 import theme from 'theme';
 import { Box, Typography, Grid, Button } from '@mui/material';
@@ -19,15 +20,16 @@ import {
   getFacetedUniqueValues,
   getFacetedMinMaxValues,
   getPaginationRowModel,
+  getColumnCanGlobalFilter,
 } from '@tanstack/react-table';
 const rep1 = {
   world: 'world ranking',
   country: 'country',
 };
 
-const fuzzyFilter = (row, columnId, value, addMeta) => {
+const fuzzyFilte2 = (row, columnId, value, addMeta) => {
   // Rank the item
-  const itemRank = rankItem(row.getValue(columnId), value);
+  const itemRank = rankItem(row.getValue(columnId).join(' '), value);
 
   // Store the itemRank info
   addMeta({
@@ -37,23 +39,39 @@ const fuzzyFilter = (row, columnId, value, addMeta) => {
   // Return if the item should be filtered in/out
   return itemRank.passed;
 };
-const World_country = ({ res2, country, enm }) => {
-  const categoryValue = '';
+const fuzzyFilter = (row, columnId, value, addMeta) => {
+  // Rank the item
+  const itemRank = Array.isArray(row.getValue(columnId))
+    ? rankItem(row.getValue(columnId).join(' '), value)
+    : rankItem(row.getValue(columnId), value);
 
+  // Store the itemRank info
+  addMeta({
+    itemRank,
+  });
+
+  // Return if the item should be filtered in/out
+  return itemRank.passed;
+};
+const World_country = ({ res2, country, enm, options_topic }) => {
+  // const categoryValue = '';
+  const data = res2.data;
+  console.log(data);
   // const cls1 = wor_path.country;
   // const enm = cls1[country].enm;
-  const [data, setData] = useState(res2.data);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [columnFilters, setColumnFilters] = useState([{ id: 'c', value: categoryValue }]);
+  // const [data, setData] = useState(res2.data);
+  // const [isLoaded, setIsLoaded] = useState(false);
+  // const [columnFilters, setColumnFilters] = useState([{ id: 'c', value: categoryValue }]);
+  const [columnFilters, setColumnFilters] = useState([]);
   const [globalFilter, setGlobalFilter] = useState('');
   const [sorting, setSorting] = useState([]);
 
-  useEffect(() => {
-    json(`${server}/rn3/${country}_en.json`).then((collection) => {
-      setData(collection.data);
-    });
-    setIsLoaded(true);
-  }, []);
+  // useEffect(() => {
+  //   json(`${server}/rn3/${country}_en.json`).then((collection) => {
+  //     setData(collection.data);
+  //   });
+  //   setIsLoaded(true);
+  // }, []);
   function NumberSort2(rowA, rowB, columnId) {
     const numA = Number(rowA.getValue(columnId)[0]);
     const numB = Number(rowB.getValue(columnId)[0]);
@@ -63,6 +81,9 @@ const World_country = ({ res2, country, enm }) => {
   const columns = res2.columns;
 
   columns[3].sortingFn = NumberSort2;
+  columns[0].filterFn = 'arrIncludes';
+  columns[0].enableGlobalFilter = true;
+
   const table = useReactTable({
     data,
     columns,
@@ -71,6 +92,7 @@ const World_country = ({ res2, country, enm }) => {
     },
     filterFns: {
       fuzzy: fuzzyFilter,
+      fuzz2: fuzzyFilte2,
     },
     sortingFns: { NumberSort2: NumberSort2 },
     state: {
@@ -88,6 +110,7 @@ const World_country = ({ res2, country, enm }) => {
     onColumnFiltersChange: setColumnFilters,
     onGlobalFilterChange: setGlobalFilter,
     globalFilterFn: fuzzyFilter,
+    // globalFilterFn: 'arrIncludes',
     getCoreRowModel: getCoreRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     getSortedRowModel: getSortedRowModel(),
@@ -95,6 +118,10 @@ const World_country = ({ res2, country, enm }) => {
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
     getFacetedMinMaxValues: getFacetedMinMaxValues(),
+    // getColumnCanGlobalFilter: getColumnCanGlobalFilter(),
+    getColumnCanGlobalFilter: (col) => {
+      return col.columnDef.enableGlobalFilter ?? true;
+    },
   });
   return (
     <Box
@@ -174,9 +201,13 @@ const World_country = ({ res2, country, enm }) => {
                             desc: ' ▼',
                           }[header.column.getIsSorted()] ?? null}
                         </div>
-                        {(ih == 0 || ih == 1) && header.column.getCanFilter() ? (
+                        {ih == 0 && header.column.getCanFilter() ? (
                           <div>
-                            <Filter column={header.column} table={table} />
+                            <SimpleFilte2
+                              column={header.column}
+                              table={table}
+                              options_topic={options_topic}
+                            />
                           </div>
                         ) : null}
                       </>
@@ -187,20 +218,26 @@ const World_country = ({ res2, country, enm }) => {
             ))}
           </thead>
           <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr key={row.id}>
-                {row.getVisibleCells().map((cell, i1) => (
-                  <td key={cell.id}>
-                    {/* {i1 == 0 && wor_path.topic.find((s) => s.id1 == cell.getValue()).ne1} */}
-                    {i1 == 0 && cell.getValue()}
-                    {i1 == 2 && Number(cell.getValue()).toLocaleString()}
-                    {(i1 == 1 || i1 == 4) && cell.getValue()}
-                    {i1 == 3 && (
-                      <Link prefetch={false} href={'/world/category/' + cell.getValue()[1]}>
-                        {cell.getValue()[0]}
-                      </Link>
-                    )}
-                    {/* {i1 == 3 &&                      <>
+            {table.getRowModel().rows.map((row) => {
+              return (
+                <tr key={row.id}>
+                  {row.getVisibleCells().map((cell, i1) => (
+                    <td key={cell.id}>
+                      {/* {i1 == 0 && wor_path.topic.find((s) => s.id1 == cell.getValue()).ne1} */}
+                      {i1 == 0 && (
+                        <>
+                          <AnalyticsRoundedIcon sx={{ verticalAlign: 'bottom' }} />
+                          {cell.getValue()}
+                        </>
+                      )}
+                      {i1 == 1 && Number(cell.getValue()).toLocaleString()}
+                      {i1 == 3 && cell.getValue()}
+                      {i1 == 2 && (
+                        <Link prefetch={false} href={'/world/category/' + cell.getValue()[1]}>
+                          #{cell.getValue()[0]}
+                        </Link>
+                      )}
+                      {/* {i1 == 3 &&                      <>
                         { cls1[cell.getValue()] && (
                           <img
                             src={`/img/wlogo/${cls1[cell.getValue()].log}.png`}
@@ -213,10 +250,11 @@ const World_country = ({ res2, country, enm }) => {
                           {cls1[cell.getValue()] ? cls1[cell.getValue()].enm : ''}
                         </Link>
                       </> } */}
-                  </td>
-                ))}
-              </tr>
-            ))}
+                    </td>
+                  ))}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
         <Grid container spacing={0.5} columns={{ xs: 12, sm: 12 }} className={classes.pagination}>
@@ -298,6 +336,34 @@ const World_country = ({ res2, country, enm }) => {
   );
 };
 export default World_country;
+
+function SimpleFilte2({ column, table, options_topic }) {
+  const firstValue = table.getPreFilteredRowModel().flatRows[0]?.getValue(column.id);
+
+  const columnFilterValue = column.getFilterValue();
+
+  const sortedUniqueValues = options_topic;
+
+  return (
+    <>
+      <select
+        value={columnFilterValue ?? ''}
+        onChange={(e) => {
+          column.setFilterValue(e.target.value || undefined);
+        }}
+      >
+        <option value=''>All</option>
+        {sortedUniqueValues.map((v, i) => {
+          return (
+            <option key={i} value={v}>
+              {v}
+            </option>
+          );
+        })}
+      </select>
+    </>
+  );
+}
 
 function Filter({ column, table }) {
   const firstValue = table.getPreFilteredRowModel().flatRows[0]?.getValue(column.id);

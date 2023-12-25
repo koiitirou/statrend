@@ -13,13 +13,13 @@
 .retable .table1 td:nth-child(3),
 .retable .table1 td:nth-child(4),
 .retable .table1 td:nth-child(5),
-.retable .table1 td:nth-child(6) {
+.retable .table1 td:nth-child(2) {
   text-align: left;
 }
 .retable .table1 td:nth-child(3) .cnt_value,
 .retable .table1 td:nth-child(4) .cnt_value,
 .retable .table1 td:nth-child(5) .cnt_value,
-.retable .table1 td:nth-child(6) .cnt_value {
+.retable .table1 td:nth-child(2) .cnt_value {
   text-align: center;
 }
 .retable .table1 td:nth-child(7) {
@@ -58,12 +58,12 @@ tbody .tr1:nth-of-type(even) {
 }
 
 @media (max-width: 900px) {
-  .retable .table1 td:nth-child(7),
-  .retable .table1 th:nth-child(7),
-  .retable .table1 td:nth-child(6),
-  .retable .table1 th:nth-child(6),
-  .retable .table1 td:nth-child(5),
-  .retable .table1 th:nth-child(5) {
+  .retable .table1.world1 td:nth-child(4),
+  .retable .table1.world1 th:nth-child(4),
+  .retable .table1.world1 td:nth-child(6),
+  .retable .table1.world1 th:nth-child(6),
+  .retable .table1.world1 td:nth-child(5),
+  .retable .table1.world1 th:nth-child(5) {
     display: none;
   }
 }

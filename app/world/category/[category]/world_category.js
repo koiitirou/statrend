@@ -173,7 +173,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
           );
 
           if (th_categories && th_categories_base != undefined) {
-            if (th_categories[graph.value] != '') {
+            if (th_categories[graph.value] != '' && th_categories[graph.value][0] != '') {
               if (Array.isArray(th_categories[graph.value])) {
                 child2[cls1[th_categories_base.i].enm] = Number(th_categories[graph.value][0]);
               } else {
@@ -193,6 +193,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
     world: 'world ranking',
   };
   rep1[did1] = ssg1.def.ide;
+  console.log(data);
   return (
     <Box
       sx={{
@@ -321,7 +322,9 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                     {i1 == 3 && (
                       <div className={classes.p1}>
                         <div className={classes.p2}>
-                          {cell.getValue() ? Number(cell.getValue()[0]).toLocaleString() : ''}
+                          {cell.getValue()[0] != ''
+                            ? Number(cell.getValue()[0]).toLocaleString()
+                            : ''}
                           {/* {ssg1.def.ute} */}
                         </div>
                         <div className={classes.p4}>

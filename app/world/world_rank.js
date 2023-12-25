@@ -1,10 +1,12 @@
 'use client';
+import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded';
 import Bc3 from 'components/layout/bc3';
 import { Box, Typography, Grid, Button, Item } from '@mui/material';
 import Link from 'next/link';
 import { useState, useEffect, useMemo } from 'react';
 import classes from 'components/css/ranking.module.css';
 import wor1 from 'components/wor/world_ranking_en.json';
+import { rankItem, compareItems } from '@tanstack/match-sorter-utils';
 import {
   flexRender,
   getCoreRowModel,
@@ -19,7 +21,7 @@ import {
 
 const fuzzyFilter = (row, columnId, value, addMeta) => {
   // Rank the item
-  const itemRank = rankItem(row.getValue(columnId), value);
+  const itemRank = rankItem(row.getValue(columnId).join(' '), value);
 
   // Store the itemRank info
   addMeta({
@@ -31,6 +33,7 @@ const fuzzyFilter = (row, columnId, value, addMeta) => {
 };
 
 const World_rank = ({ wor_path }) => {
+  //GB_XPD_RSDV_GD_ZS
   const [columnFilters, setColumnFilters] = useState([]);
   const [globalFilter, setGlobalFilter] = useState('');
   const [sorting, setSorting] = useState([]);
@@ -39,7 +42,14 @@ const World_rank = ({ wor_path }) => {
     world: 'world ranking',
   };
   const columns = wor1.columns;
+  columns[0].filterFn = 'fuzzy';
   const data = wor1.data;
+
+  var options_topic = [];
+  wor_path.topic.forEach((v) => {
+    options_topic.push(v.ne1);
+  });
+
   const table = useReactTable({
     data,
     columns,
@@ -105,11 +115,27 @@ const World_rank = ({ wor_path }) => {
                             desc: ' ▼',
                           }[header.column.getIsSorted()] ?? null}
                         </div>
-                        {ih == 0 && header.column.getCanFilter() ? (
-                          <div>
-                            <Filter column={header.column} table={table} />
-                          </div>
-                        ) : null}
+                        {
+                          // ih == 0 && header.column.getCanFilter() ? (
+                          //   <div>
+                          //     <SimpleFilter column={header.column} table={table} />
+                          //   </div>
+                          // ) :
+                          // ih == 1 && header.column.getCanFilter() ? (
+                          //   <div>
+                          //     <Filter column={header.column} table={table} />
+                          //   </div>
+                          // ) :
+                          ih == 0 && header.column.getCanFilter() ? (
+                            <div>
+                              <SimpleFilte2
+                                column={header.column}
+                                table={table}
+                                options_topic={options_topic}
+                              />
+                            </div>
+                          ) : null
+                        }
                       </>
                     )}
                   </th>
@@ -118,52 +144,45 @@ const World_rank = ({ wor_path }) => {
             ))}
           </thead>
           <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr key={row.id}>
-                {row.getVisibleCells().map((cell, i1) => (
-                  <td key={cell.id}>
-                    {/* {i1 == 0 && wor_path.topic.find((s) => s.id1 == cell.getValue()).ne1} */}
-                    {i1 == 0 && cell.getValue()}
-                    {i1 == 1 && (
-                      <Link prefetch={false} href={'/world/category/' + cell.getValue()[1]}>
-                        {cell.getValue()[0]}
-                      </Link>
-                    )}
-                    {(i1 == 2 || i1 == 3 || i1 == 4 || i1 == 5) && (
-                      <>
-                        {cls1[cell.getValue()[1]] && (
-                          <img
-                            src={`/img/wlogo/${cls1[cell.getValue()[1]].log}.png`}
-                            width={18}
-                            alt={cell.getValue()}
-                          ></img>
-                        )}
+            {table.getRowModel().rows.map((row) => {
+              // console.log(rankItem(row.getValue('t').join(' '), 'agri'));
+              return (
+                <tr key={row.id}>
+                  {row.getVisibleCells().map((cell, i1) => (
+                    <td key={cell.id}>
+                      {/* {i1 == 0 && wor_path.topic.find((s) => s.id1 == cell.getValue()).ne1} */}
+                      {/* {i1 == 0 && cell.getValue()} */}
+                      {i1 == 0 && (
+                        <>
+                          <AnalyticsRoundedIcon sx={{ verticalAlign: 'bottom' }} />
+                          <Link prefetch={false} href={'/world/category/' + cell.getValue()[1]}>
+                            {cell.getValue()[0]}
+                          </Link>
+                        </>
+                      )}
+                      {(i1 == 2 || i1 == 3 || i1 == 4 || i1 == 1) && (
+                        <>
+                          {cls1[cell.getValue()[1]] && (
+                            <img
+                              src={`/img/wlogo/${cls1[cell.getValue()[1]].log}.png`}
+                              width={18}
+                              alt={cell.getValue()}
+                            ></img>
+                          )}
 
-                        <Link prefetch={false} href={'/world/country/' + cell.getValue()[1]}>
-                          {cell.getValue()[0]}
-                        </Link>
-                        <Box className={classes.cnt_value}>{cell.getValue()[2]}</Box>
-                      </>
-                    )}
+                          <Link prefetch={false} href={'/world/country/' + cell.getValue()[1]}>
+                            {cell.getValue()[0]}
+                          </Link>
+                          <Box className={classes.cnt_value}>{cell.getValue()[2]}</Box>
+                        </>
+                      )}
 
-                    {i1 == 6 && cell.getValue()}
-                    {/* {i1 == 3 &&                      <>
-                        { cls1[cell.getValue()] && (
-                          <img
-                            src={`/img/wlogo/${cls1[cell.getValue()].log}.png`}
-                            width={18}
-                            alt={cell.getValue()}
-                          ></img>
-                        )}
-
-                        <Link prefetch={false} href={'/world/country/' + cell.getValue()}>
-                          {cls1[cell.getValue()] ? cls1[cell.getValue()].enm : ''}
-                        </Link>
-                      </> } */}
-                  </td>
-                ))}
-              </tr>
-            ))}
+                      {i1 == 5 && cell.getValue()}
+                    </td>
+                  ))}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
         <Grid container spacing={0.5} columns={{ xs: 12, sm: 12 }} className={classes.pagination}>
@@ -245,6 +264,68 @@ const World_rank = ({ wor_path }) => {
   );
 };
 
+function SimpleFilte2({ column, table, options_topic }) {
+  const firstValue = table.getPreFilteredRowModel().flatRows[0]?.getValue(column.id);
+
+  const columnFilterValue = column.getFilterValue();
+
+  const sortedUniqueValues = options_topic;
+
+  return (
+    <>
+      <select
+        value={columnFilterValue ?? ''}
+        onChange={(e) => {
+          column.setFilterValue(e.target.value || undefined);
+        }}
+      >
+        <option value=''>All</option>
+        {sortedUniqueValues.map((v, i) => {
+          return (
+            <option key={i} value={v}>
+              {v}
+            </option>
+          );
+        })}
+      </select>
+    </>
+  );
+}
+
+function SimpleFilter({ column, table }) {
+  const firstValue = table.getPreFilteredRowModel().flatRows[0]?.getValue(column.id);
+
+  const columnFilterValue = column.getFilterValue();
+
+  const sortedUniqueValues = useMemo(
+    () =>
+      typeof firstValue === 'number'
+        ? []
+        : Array.from(column.getFacetedUniqueValues().keys()).sort(),
+    [column.getFacetedUniqueValues()],
+  );
+
+  return (
+    <>
+      <select
+        value={columnFilterValue ?? ''}
+        onChange={(e) => {
+          column.setFilterValue(e.target.value || undefined);
+        }}
+      >
+        <option value=''>All</option>
+        {sortedUniqueValues.map((v, i) => {
+          return (
+            <option key={i} value={v}>
+              {v}
+            </option>
+          );
+        })}
+      </select>
+    </>
+  );
+}
+
 function Filter({ column, table }) {
   const firstValue = table.getPreFilteredRowModel().flatRows[0]?.getValue(column.id);
 
@@ -289,7 +370,6 @@ function Filter({ column, table }) {
   ) : (
     <>
       <datalist id={column.id + 'list'}>
-        {/* {sortedUniqueValues.slice(0, 5000).map((value) => ( */}
         {sortedUniqueValues.map((value) => (
           <option value={value} key={value} />
         ))}
@@ -304,7 +384,6 @@ function Filter({ column, table }) {
         list={column.id + 'list'}
         style={{ width: '100px' }}
       />
-      <div className='h-1' />
     </>
   );
 }
