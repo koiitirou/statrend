@@ -1,12 +1,14 @@
 'use client';
+
 import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded';
 import Bc3 from 'components/layout/bc3';
-import { Box, Typography, Grid, Button, Item } from '@mui/material';
+import { Box, Typography, Grid } from '@mui/material';
 import Link from 'next/link';
 import { useState, useEffect, useMemo } from 'react';
 import classes from 'components/css/ranking.module.css';
 import wor1 from 'components/wor/world_ranking_en.json';
-import { rankItem, compareItems } from '@tanstack/match-sorter-utils';
+import { rankItem } from '@tanstack/match-sorter-utils';
+import Windowed from 'components/function/world_windowed';
 import {
   flexRender,
   getCoreRowModel,
@@ -19,9 +21,23 @@ import {
   getPaginationRowModel,
 } from '@tanstack/react-table';
 
+const fuzzyFilte2 = (row, columnId, value, addMeta) => {
+  // Rank the item
+  const itemRank = rankItem(row.getValue(columnId), value);
+
+  // Store the itemRank info
+  addMeta({
+    itemRank,
+  });
+
+  // Return if the item should be filtered in/out
+  return itemRank.passed;
+};
 const fuzzyFilter = (row, columnId, value, addMeta) => {
   // Rank the item
-  const itemRank = rankItem(row.getValue(columnId).join(' '), value);
+  const itemRank = Array.isArray(row.getValue(columnId))
+    ? rankItem(row.getValue(columnId).join(' '), value)
+    : rankItem(row.getValue(columnId), value);
 
   // Store the itemRank info
   addMeta({
@@ -42,7 +58,13 @@ const World_rank = ({ wor_path }) => {
     world: 'world ranking',
   };
   const columns = wor1.columns;
-  columns[0].filterFn = 'fuzzy';
+  columns[0].enableGlobalFilter = true;
+  columns[1].enableGlobalFilter = true;
+  columns[2].enableGlobalFilter = true;
+  columns[3].enableGlobalFilter = true;
+  columns[4].enableGlobalFilter = true;
+  columns[0].filterFn = 'arrIncludes';
+
   const data = wor1.data;
 
   var options_topic = [];
@@ -56,6 +78,7 @@ const World_rank = ({ wor_path }) => {
     initialState: { pagination: { pageSize: 100 } },
     filterFns: {
       fuzzy: fuzzyFilter,
+      fuzzy: fuzzyFilte2,
     },
     state: {
       sorting,
@@ -79,6 +102,9 @@ const World_rank = ({ wor_path }) => {
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
     getFacetedMinMaxValues: getFacetedMinMaxValues(),
+    getColumnCanGlobalFilter: (col) => {
+      return col.columnDef.enableGlobalFilter ?? true;
+    },
   });
   return (
     <Box
@@ -91,8 +117,16 @@ const World_rank = ({ wor_path }) => {
       }}
     >
       <Bc3 rep1={rep1} />
+      <Windowed />
       <Typography variant='h1'>World rankings for statistics by countries</Typography>
       <Box className={classes.retable}>
+        <div>
+          <DebouncedInput
+            value={globalFilter ?? ''}
+            onChange={(value) => setGlobalFilter(String(value))}
+            placeholder='Search all columns...'
+          />
+        </div>
         <table className={[classes.table1, classes.world_en, classes.world1].join(' ')}>
           <thead>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -162,7 +196,7 @@ const World_rank = ({ wor_path }) => {
                       )}
                       {(i1 == 2 || i1 == 3 || i1 == 4 || i1 == 1) && (
                         <>
-                          {cls1[cell.getValue()[1]] && (
+                          {cell.getValue()[1] != 'TW' && (
                             <img
                               src={`/img/wlogo/${cls1[cell.getValue()[1]].log}.png`}
                               width={18}

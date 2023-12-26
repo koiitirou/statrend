@@ -193,7 +193,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
     world: 'world ranking',
   };
   rep1[did1] = ssg1.def.ide;
-  console.log(data);
+
   return (
     <Box
       sx={{

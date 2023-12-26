@@ -25,6 +25,7 @@
     "react-dom": "18.2.0",
     "react-select": "^5.7.4",
     "react-simple-maps": "^3.0.0",
+    "react-windowed-select": "^5.1.1",
     "recharts": "^2.7.2"
   },
   "prettier": {
