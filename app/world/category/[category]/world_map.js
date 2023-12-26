@@ -54,10 +54,13 @@ const Map1 = ({ ssg1, marks, cls1, isLoaded }) => {
                   <tr>
                     <td>{ssg1.def.ide}</td>
                     <td>
+                      {/* (cls1[cur2.i] ? cls1[cur2.i].enm : '')  */}
                       {cur2
-                        ? Number(cur2.v[0]).toLocaleString(undefined, {
-                            maximumFractionDigits: 2,
-                          })
+                        ? cur2.v
+                          ? Number(cur2.v[0]).toLocaleString(undefined, {
+                              maximumFractionDigits: 2,
+                            })
+                          : ''
                         : ''}
                       {ssg1.def.ut1}
                     </td>

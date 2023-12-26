@@ -68,7 +68,7 @@ export default async function Page({ params }) {
     { value: 'd', label: 'Change', unit: '%', rev: false },
   ];
   const time_list2 = ssg1.def.tml;
-
+  const columns0 = ssg1.tab[ssg1.def.tmx].columns_en;
   return (
     <>
       <ResBar />
@@ -79,6 +79,7 @@ export default async function Page({ params }) {
         graphList={graphList}
         time_list2={time_list2}
         cls1={cls1}
+        columns0={columns0}
         // array4={array4}
         // wor_path={wor_path}
       />

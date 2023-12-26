@@ -2,7 +2,7 @@
 
 import Map1 from './world_map';
 import { Box, Typography, Chip, Slider } from '@mui/material';
-
+import Windowed from 'components/function/world_windowed';
 import theme from 'theme';
 import Link from 'next/link';
 import classes from 'components/css/world.module.css';
@@ -30,7 +30,8 @@ import Select from 'react-select';
 import palette1 from 'components/data/palette.json';
 import Bc3 from 'components/layout/bc3';
 
-const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
+const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1, columns0 }) => {
+  console.log(cls1);
   function IndeterminateCheckbox({ indeterminate, className = '', ...rest }) {
     const ref = useRef();
     useEffect(() => {
@@ -66,7 +67,8 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
         </div>
       ),
     },
-    ...ssg1.tab[ssg1.def.tmx].columns_en,
+    // ...ssg1.tab[ssg1.def.tmx].columns_en,
+    ...columns0,
   ];
   const [rowSelection, setRowSelection] = useState({});
   const [sorting, setSorting] = useState([]);
@@ -194,6 +196,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
   };
   rep1[did1] = ssg1.def.ide;
 
+  console.log(columns);
   return (
     <Box
       sx={{
@@ -205,6 +208,7 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
       }}
     >
       <Bc3 rep1={rep1} />
+      <Windowed />
       <Typography variant='h1'>
         {`${ssg1.def.ide} ${ssg1.def.tmn}-${ssg1.def.tmx} ranked by countries in the world`}
       </Typography>
@@ -306,13 +310,11 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                     {i1 == 1 && flexRender(cell.column.columnDef.cell, cell.getContext())}
                     {i1 == 2 && (
                       <>
-                        {cell.getValue() != 'XK' && cls1[cell.getValue()] && (
-                          <img
-                            src={`/img/wlogo/${cls1[cell.getValue()].log}.png`}
-                            width={18}
-                            alt={cell.getValue()}
-                          ></img>
-                        )}
+                        <img
+                          src={`/img/wlogo2/${cell.getValue()}.png`}
+                          width={18}
+                          alt={cell.getValue()}
+                        ></img>
 
                         <Link prefetch={false} href={'/world/country/' + cell.getValue()}>
                           {cls1[cell.getValue()] ? cls1[cell.getValue()].enm : ''}
@@ -322,8 +324,10 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                     {i1 == 3 && (
                       <div className={classes.p1}>
                         <div className={classes.p2}>
-                          {cell.getValue()[0] != ''
-                            ? Number(cell.getValue()[0]).toLocaleString()
+                          {cell.getValue()
+                            ? cell.getValue()[0] != ''
+                              ? Number(cell.getValue()[0]).toLocaleString()
+                              : ''
                             : ''}
                           {/* {ssg1.def.ute} */}
                         </div>
@@ -332,7 +336,11 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1 }) => {
                             className={classes.p3}
                             style={{
                               width: cell.getValue() ? cell.getValue()[1] + '%' : '0',
-                              // backgroundColor: cell.getValue() ? cls1[cell.getValue()[2]].lcr : '',
+                              backgroundColor: cell.getValue()
+                                ? cls1[cell.getValue()[2]]
+                                  ? cls1[cell.getValue()[2]].lcr
+                                  : ''
+                                : '',
                             }}
                           ></div>
                         </div>

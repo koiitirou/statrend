@@ -76,7 +76,7 @@ const App = () => {
         <Grid container rowspacing={1} columns={12} columnSpacing={1}>
           <Grid item xs={12} md={6}>
             <Typography variant='caption' paddingLeft='10px'>
-              Search statistical items
+              Search statistics
             </Typography>
             <Grid container rowspacing={1} columns={12} columnSpacing={1}>
               <Grid item xs={10}>

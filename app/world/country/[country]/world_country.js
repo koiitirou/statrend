@@ -7,8 +7,7 @@ import { Box, Typography, Grid, Button } from '@mui/material';
 import { useState, useEffect, useMemo, Fragment } from 'react';
 import classes from 'components/css/ranking.module.css';
 import Link from 'next/link';
-import { json } from 'd3-fetch';
-import { server } from 'components/data/config';
+import Windowed from 'components/function/world_windowed';
 import { rankItem } from '@tanstack/match-sorter-utils';
 import {
   flexRender,
@@ -134,6 +133,7 @@ const World_country = ({ res2, country, enm, options_topic }) => {
       }}
     >
       <Bc3 rep1={rep1} />
+      <Windowed />
       <Typography variant='h1'>
         {enm}
         {"'"}s Statistical Data Ranking - summary
