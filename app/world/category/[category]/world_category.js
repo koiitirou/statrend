@@ -31,7 +31,6 @@ import palette1 from 'components/data/palette.json';
 import Bc3 from 'components/layout/bc3';
 
 const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1, columns0 }) => {
-  console.log(cls1);
   function IndeterminateCheckbox({ indeterminate, className = '', ...rest }) {
     const ref = useRef();
     useEffect(() => {
@@ -196,7 +195,6 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1, columns0 }) 
   };
   rep1[did1] = ssg1.def.ide;
 
-  console.log(columns);
   return (
     <Box
       sx={{
