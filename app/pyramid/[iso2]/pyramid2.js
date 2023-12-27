@@ -128,7 +128,6 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 const Pyramid2 = (props) => {
-  console.log(props);
   const con_name = props.res3.params.name;
 
   const e0 = props.res2;

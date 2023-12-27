@@ -179,7 +179,6 @@ const World_rank = ({ wor_path }) => {
           </thead>
           <tbody>
             {table.getRowModel().rows.map((row) => {
-              // console.log(rankItem(row.getValue('t').join(' '), 'agri'));
               return (
                 <tr key={row.id}>
                   {row.getVisibleCells().map((cell, i1) => (

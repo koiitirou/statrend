@@ -12,10 +12,6 @@ const rep1 = {
 };
 
 const World_country = ({ res2, country, wor_category1, array6, wor_path }) => {
-  // console.log(res2);
-  // console.log(array6);
-  // console.log(wor_path);
-  // console.log(wor_category1);
   return (
     <Box
       sx={{

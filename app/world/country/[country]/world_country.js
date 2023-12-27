@@ -55,7 +55,6 @@ const fuzzyFilter = (row, columnId, value, addMeta) => {
 const World_country = ({ res2, country, enm, options_topic }) => {
   // const categoryValue = '';
   const data = res2.data;
-  console.log(data);
   // const cls1 = wor_path.country;
   // const enm = cls1[country].enm;
   // const [data, setData] = useState(res2.data);

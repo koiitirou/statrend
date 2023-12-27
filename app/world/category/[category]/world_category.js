@@ -79,7 +79,6 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1, columns0 }) 
   const [did_list1, setDid] = useState([]);
   const [dis_list1, setDnm] = useState([]);
   const [graph, setGraph] = useState(graphList[1]);
-  // console.log(data);
   useEffect(() => {
     setRowSelection({});
   }, [value]);
