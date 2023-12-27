@@ -11,12 +11,20 @@ import theme from 'theme';
 
 const Content1 = () => {
   return (
-    <Blogcard
-      href1='/world/'
-      title1='World data ranking'
-      sub1='World time-series data ranking: population, economy, gender, etc'
-      icon1={<EqualizerIcon sx={{ fill: '#007FFF' }} fontSize='large' />}
-    />
+    <>
+      <Blogcard
+        href1='/world/'
+        title1='World Data Ranking'
+        sub1='World time-series data ranking: population, economy, gender, etc'
+        icon1={<PublicIcon sx={{ fill: '#007FFF' }} fontSize='large' />}
+      />
+      <Blogcard
+        href1='/pyramid/JP'
+        title1='Population Pyramid'
+        sub1='World population pyramid, trends, segmented population'
+        icon1={<EqualizerIcon sx={{ fill: '#007FFF' }} fontSize='large' />}
+      />
+    </>
   );
 };
 

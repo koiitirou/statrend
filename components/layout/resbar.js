@@ -87,6 +87,13 @@ function ResponsiveAppBar() {
                   </Link>
                 </Typography>
               </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu}>
+                <Typography textAlign='center'>
+                  <Link href='/pyramid/JP' sx={{ color: 'black' }}>
+                    Population Pyramid
+                  </Link>
+                </Typography>
+              </MenuItem>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, fill: '#007FFF' }} />
@@ -115,6 +122,14 @@ function ResponsiveAppBar() {
             >
               <Link href='/world' sx={{ color: 'black' }}>
                 World Ranking
+              </Link>
+            </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'rgba(0, 0, 0, 0.87)', display: 'block' }}
+            >
+              <Link href='/pyramid/JP' sx={{ color: 'black' }}>
+                Population Pyramid
               </Link>
             </Button>
           </Box>
