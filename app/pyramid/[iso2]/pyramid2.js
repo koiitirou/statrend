@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import Windowed from './pyramid_windowed';
 import theme from 'theme';
 import Bc3 from 'components/layout/bc3';
@@ -173,6 +175,12 @@ const Pyramid2 = (props) => {
     >
       <Bc3 rep1={rep1} />
       <Windowed />
+      <Typography variant='body1'>
+        <KeyboardDoubleArrowRightIcon sx={{ verticalAlign: 'bottom' }} />
+        <Link prefetch={false} href={'https://www.statja.com/pyramid/' + props.iso2}>
+          Japanese Version
+        </Link>
+      </Typography>
       <Pyramid3 e0={e0} con_name={con_name} marks={marks} />
       <Pyramid4 e0={e0} con_name={con_name} marks={marks} />
 

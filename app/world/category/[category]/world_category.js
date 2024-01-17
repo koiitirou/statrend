@@ -1,5 +1,7 @@
 'use client';
 
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+
 import Map1 from './world_map';
 import { Box, Typography, Chip, Slider } from '@mui/material';
 import Windowed from 'components/function/world_windowed';
@@ -213,6 +215,12 @@ const Content1 = ({ ssg1, did1, marks, graphList, time_list2, cls1, columns0 }) 
         {`Time-series interactive graphs, charts, and maps for ${ssg1.def.tmn}-${ssg1.def.tmx} explore the list of countries ranked by ${ssg1.def.ide}.`}
       </Typography>
       <Typography variant='body1'> {`${ssg1.def.dsc}`}</Typography>
+      <Typography variant='body1'>
+        <KeyboardDoubleArrowRightIcon sx={{ verticalAlign: 'bottom' }} />
+        <Link prefetch={false} href={'https://www.statja.com/world/' + did1}>
+          Japanese Version
+        </Link>
+      </Typography>
       {isLoaded && (
         <Map1
           did1={did1}

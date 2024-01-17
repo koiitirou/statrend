@@ -1,5 +1,6 @@
 'use client';
 
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded';
 import Bc3 from 'components/layout/bc3';
 import theme from 'theme';
@@ -165,7 +166,12 @@ const World_country = ({ res2, country, enm, options_topic }) => {
         This page summarizes {enm}
         {"'"}s statistical data rankings such as economy, area, population, etc.
       </Typography>
-
+      <Typography variant='body1'>
+        <KeyboardDoubleArrowRightIcon sx={{ verticalAlign: 'bottom' }} />
+        <Link prefetch={false} href={'https://www.statja.com/country/' + country}>
+          Japanese Version
+        </Link>
+      </Typography>
       <Typography variant='h2'>
         {enm}
         {"'"}s rankings for statistics - summary

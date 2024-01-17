@@ -1,5 +1,5 @@
 'use client';
-
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded';
 import Bc3 from 'components/layout/bc3';
 import { Box, Typography, Grid } from '@mui/material';
@@ -118,7 +118,14 @@ const World_rank = ({ wor_path }) => {
     >
       <Bc3 rep1={rep1} />
       <Windowed />
+      <Typography variant='body1'>
+        <KeyboardDoubleArrowRightIcon sx={{ verticalAlign: 'bottom' }} />
+        <Link prefetch={false} href={'https://www.statja.com/world/'}>
+          Japanese Version
+        </Link>
+      </Typography>
       <Typography variant='h1'>World rankings for statistics by countries</Typography>
+
       <Box className={classes.retable}>
         <div>
           <DebouncedInput
